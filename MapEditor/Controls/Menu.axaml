@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MapEditor.Controls.Menu">
+    <Menu DockPanel.Dock="Top">
+        <MenuItem Header="_File">
+            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Ctrl+N" Header="_New Workspace..."></MenuItem>
+            <MenuItem Header="_New Map..."></MenuItem>
+            <Separator/>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-folder-open" InputGesture="Ctrl+O" Header="_Open..."></MenuItem>
+            <Separator/>
+            <MenuItem Header="_Close Environment"></MenuItem>
+            <MenuItem InputGesture="Ctrl+N" Header="_Close"></MenuItem>
+            <MenuItem InputGesture="Ctrl+N" Header="_Close All"></MenuItem>
+            <Separator/>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-floppy-disk" InputGesture="Ctrl+S" Header="_Save"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-floppy-disk" InputGesture="Ctrl+Shift+S" Header="_Save All"></MenuItem>
+            <Separator/>
+            <MenuItem  InputGesture="Ctrl+Q" Header="_Exit"></MenuItem>
+        </MenuItem>
+        <MenuItem Header="_Edit">
+            <MenuItem i:MenuItem.Icon="fa-solid fa-rotate-left" InputGesture="Ctrl+Z" Header="_Undo"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-rotate-right" InputGesture="Ctrl+Shift+Z" Header="_Redo"></MenuItem>
+            <Separator/>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Ctrl+C" Header="_Copy"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Ctrl+V" Header="_Paste"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Ctrl+X" Header="_Cut"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Delete" Header="_Delete"></MenuItem>
+        </MenuItem>
+    </Menu>
+</UserControl>
