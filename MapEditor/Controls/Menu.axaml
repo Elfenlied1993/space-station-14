@@ -25,10 +25,14 @@
             <MenuItem i:MenuItem.Icon="fa-solid fa-rotate-left" InputGesture="Ctrl+Z" Header="_Undo"></MenuItem>
             <MenuItem i:MenuItem.Icon="fa-solid fa-rotate-right" InputGesture="Ctrl+Shift+Z" Header="_Redo"></MenuItem>
             <Separator/>
-            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Ctrl+C" Header="_Copy"></MenuItem>
-            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Ctrl+V" Header="_Paste"></MenuItem>
-            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Ctrl+X" Header="_Cut"></MenuItem>
-            <MenuItem i:MenuItem.Icon="fa-solid fa-file" InputGesture="Delete" Header="_Delete"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-copy" InputGesture="Ctrl+C" Header="_Copy"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-paste" InputGesture="Ctrl+V" Header="_Paste"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-scissors" InputGesture="Ctrl+X" Header="_Cut"></MenuItem>
+            <MenuItem i:MenuItem.Icon="fa-solid fa-eraser" InputGesture="Delete" Header="_Delete"></MenuItem>
+        </MenuItem>
+        <MenuItem Header="_Help">
+            <MenuItem i:MenuItem.Icon="fa-brands fa-github" Header="_Source Code"></MenuItem>
+            <MenuItem  Header="_About"></MenuItem>
         </MenuItem>
     </Menu>
 </UserControl>
