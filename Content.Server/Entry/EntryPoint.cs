@@ -22,6 +22,7 @@ using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Preferences.Managers;
 using Content.Server.ServerInfo;
 using Content.Server.ServerUpdates;
+using Content.Server.SS220.Discord;
 using Content.Server.SS220.PrimeWhitelist;
 using Content.Server.Voting.Managers;
 using Content.Shared.Administration;
@@ -50,6 +51,7 @@ namespace Content.Server.Entry
         private ServerUpdateManager _updateManager = default!;
         private PlayTimeTrackingManager? _playTimeTracking;
         private IEntitySystemManager? _sysMan;
+        private IServerDbManager? _dbManager;
 
         /// <inheritdoc />
         public override void Init()
@@ -99,13 +101,14 @@ namespace Content.Server.Entry
                 _updateManager = IoCManager.Resolve<ServerUpdateManager>();
                 _playTimeTracking = IoCManager.Resolve<PlayTimeTrackingManager>();
                 _sysMan = IoCManager.Resolve<IEntitySystemManager>();
+                _dbManager = IoCManager.Resolve<IServerDbManager>();
 
                 logManager.GetSawmill("Storage").Level = LogLevel.Info;
                 logManager.GetSawmill("db.ef").Level = LogLevel.Info;
 
                 IoCManager.Resolve<IAdminLogManager>().Initialize();
                 IoCManager.Resolve<IConnectionManager>().Initialize();
-                IoCManager.Resolve<IServerDbManager>().Init();
+                _dbManager.Init();
                 IoCManager.Resolve<IServerPreferencesManager>().Init();
                 IoCManager.Resolve<INodeGroupFactory>().Initialize();
                 IoCManager.Resolve<IGamePrototypeLoadManager>().Initialize();
@@ -117,6 +120,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<TTSManager>().Initialize(); // Corvax-TTS
                 IoCManager.Resolve<ServerInfoManager>().Initialize();
                 IoCManager.Resolve<Primelist>().Initialize();
+                IoCManager.Resolve<DiscordPlayerManager>().Initialize();
 
                 _voteManager.Initialize();
                 _updateManager.Initialize();
@@ -183,6 +187,7 @@ namespace Content.Server.Entry
         {
             _playTimeTracking?.Shutdown();
             _sysMan?.GetEntitySystemOrNull<StationSystem>()?.OnServerDispose();
+            _dbManager?.Shutdown();
         }
 
         private static void LoadConfigPresets(IConfigurationManager cfg, IResourceManager res, ISawmill sawmill)
