@@ -23,10 +23,6 @@ namespace Content.Server.Traitor.Uplink.Commands
             throw new NotImplementedException();
         }
 
-        List<string> IConsoleCommand.ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            return ExecuteResult(shell, argStr, args);
-        }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {

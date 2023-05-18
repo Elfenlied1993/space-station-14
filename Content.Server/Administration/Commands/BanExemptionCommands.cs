@@ -50,11 +50,7 @@ public sealed class BanExemptionUpdateCommand : LocalizedCommands
             ("uid", playerData.UserId)));
     }
 
-    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
-
+  
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
@@ -117,10 +113,7 @@ public sealed class BanExemptionGetCommand : LocalizedCommands
             ("flags", joined.ToString())));
     }
 
-    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {

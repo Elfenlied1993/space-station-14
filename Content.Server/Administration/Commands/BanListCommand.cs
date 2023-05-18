@@ -60,10 +60,7 @@ public sealed class BanListCommand : LocalizedCommands
         await ui.ChangeBanListPlayer(data.UserId);
     }
 
-    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+    
 
 
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

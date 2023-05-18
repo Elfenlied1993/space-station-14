@@ -15,10 +15,7 @@ public sealed class OSay : LocalizedCommands
 
     public override string Command => "osay";
 
-    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+ 
 
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {

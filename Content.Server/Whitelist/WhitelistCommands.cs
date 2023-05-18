@@ -44,10 +44,7 @@ public sealed class AddWhitelistCommand : IConsoleCommand
         shell.WriteError(Loc.GetString("command-whitelistadd-not-found", ("username", args[0])));
     }
 
-    List<string> IConsoleCommand.ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        return ExecuteResult(shell, argStr, args);
-    }
+ 
 
     public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
     {

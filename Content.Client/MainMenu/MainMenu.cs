@@ -1,6 +1,8 @@
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Content.Client.MainMenu.UI;
+using Content.Client.Maps;
 using Content.Client.UserInterface.Systems.EscapeMenu;
 using Robust.Client;
 using Robust.Client.Console;
@@ -52,18 +54,18 @@ namespace Content.Client.MainMenu
             //_mainMenuControl.ChangelogButton.OnPressed += ChangelogButtonPressed;
             Test();
 
-            _mainMenuControl.MapList.AddItem("Test");
-            _mainMenuControl.MapList.AddItem("Test1");
-            _mainMenuControl.MapList.AddItem("Test2");
-            _mainMenuControl.MapList.AddItem("Test3");
+          
             _client.RunLevelChanged += RunLevelChanged;
         }
 
         private async void Test()
         {
-          
-            var result = _consoleHost.ExecuteCommandResult(null, "lsmap");
-            var maplist = result;
+            var result = _prototypeManager.EnumeratePrototypes<GameMapPrototype>()
+                .ToArray();
+            foreach (var gameMapPrototype in result)
+            {
+                _mainMenuControl.MapList.AddItem($"{gameMapPrototype.ID} - {gameMapPrototype.MapName} ({gameMapPrototype.MapPath})");
+            }
         }
         /// <inheritdoc />
         protected override void Shutdown()
