@@ -44,5 +44,10 @@ namespace Content.Server.Administration.Commands
                 shell.WriteError("Could not insert into non-storage.");
             }
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

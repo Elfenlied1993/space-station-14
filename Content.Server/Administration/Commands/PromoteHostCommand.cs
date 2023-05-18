@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration.Managers;
+using Content.Server.Administration.Managers;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Console;
@@ -29,6 +29,11 @@ namespace Content.Server.Administration.Commands
 
             var adminMgr = IoCManager.Resolve<IAdminManager>();
             adminMgr.PromoteHost(targetPlayer);
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

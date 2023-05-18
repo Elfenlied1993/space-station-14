@@ -15,4 +15,9 @@ public sealed class ShowSpreadCommand : IConsoleCommand
 
         shell.WriteLine($"Set spread overlay to {system.SpreadOverlay}");
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

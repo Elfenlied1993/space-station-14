@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
@@ -21,6 +21,11 @@ namespace Content.Server.Atmos.Commands
                 var gasName = Loc.GetString(gasPrototype.Name);
                 shell.WriteLine($"{gasName} ID: {gasPrototype.ID}");
             }
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 

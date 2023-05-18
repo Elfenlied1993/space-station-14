@@ -39,5 +39,10 @@ namespace Content.Client.Commands
             configurationManager.SetCVar(cvar, id);
             shell.WriteLine($"Context Menu Grouping set to type: {configurationManager.GetCVar(cvar)}");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

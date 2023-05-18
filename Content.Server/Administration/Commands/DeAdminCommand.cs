@@ -27,5 +27,10 @@ namespace Content.Server.Administration.Commands
             var mgr = IoCManager.Resolve<IAdminManager>();
             mgr.DeAdmin(player);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

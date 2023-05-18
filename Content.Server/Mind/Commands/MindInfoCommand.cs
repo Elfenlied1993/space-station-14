@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Content.Server.Administration;
 using Content.Server.Players;
 using Content.Shared.Administration;
@@ -47,6 +47,11 @@ namespace Content.Server.Mind.Commands
             }
 
             shell.WriteLine(builder.ToString());
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

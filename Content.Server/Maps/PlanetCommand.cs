@@ -100,6 +100,11 @@ public sealed class PlanetCommand : IConsoleCommand
         shell.WriteLine(Loc.GetString("cmd-planet-success", ("mapId", mapId)));
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)

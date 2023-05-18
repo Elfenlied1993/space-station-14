@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Administration.BanList;
 using Content.Server.Database;
 using Content.Server.EUI;
@@ -58,6 +58,11 @@ public sealed class BanListCommand : LocalizedCommands
         var ui = new BanListEui();
         _eui.OpenEui(ui, player);
         await ui.ChangeBanListPlayer(data.UserId);
+    }
+
+    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
 

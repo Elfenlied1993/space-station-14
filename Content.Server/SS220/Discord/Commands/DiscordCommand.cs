@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Content.Server.Chat.Managers;
 using Content.Shared.Administration;
 using Content.Shared.Chat;
@@ -47,5 +47,10 @@ public sealed class DiscordCommand : IConsoleCommand
         {
             shell.WriteLine("Произошла ошибка. Свяжитесь с администрацией");
         }
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -1,4 +1,4 @@
-﻿using Content.Server.Ghost;
+using Content.Server.Ghost;
 using Content.Server.Revenant.EntitySystems;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
@@ -33,6 +33,11 @@ namespace Content.Server.Administration.Commands
 
             ghostSys.MakeVisible(visible);
             revSys.MakeVisible(visible);
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

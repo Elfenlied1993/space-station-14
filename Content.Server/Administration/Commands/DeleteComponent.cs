@@ -1,4 +1,4 @@
-﻿using Content.Shared.Administration;
+using Content.Shared.Administration;
 using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands
@@ -44,6 +44,11 @@ namespace Content.Server.Administration.Commands
 
                     break;
             }
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

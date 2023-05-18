@@ -1,4 +1,4 @@
-﻿using Content.Server.GameTicking;
+using Content.Server.GameTicking;
 using Content.Server.Ghost.Components;
 using Content.Server.Players;
 using Content.Shared.Administration;
@@ -66,6 +66,11 @@ namespace Content.Server.Administration.Commands
 
             var comp = _entities.GetComponent<GhostComponent>(ghost);
             EntitySystem.Get<SharedGhostSystem>().SetCanReturnToBody(comp, canReturn);
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

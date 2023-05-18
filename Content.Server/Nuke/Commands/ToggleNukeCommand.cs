@@ -59,6 +59,11 @@ public sealed class ToggleNukeCommand : LocalizedCommands
         nukeSys.ToggleBomb(bombUid, bomb);
     }
 
+    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)

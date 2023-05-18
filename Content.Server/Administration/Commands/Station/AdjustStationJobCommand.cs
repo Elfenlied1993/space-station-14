@@ -57,4 +57,9 @@ public sealed class AdjustStationJobCommand : IConsoleCommand
 
         stationJobs.TrySetJobSlot(station, job, amount, true);
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

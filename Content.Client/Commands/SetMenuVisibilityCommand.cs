@@ -22,6 +22,11 @@ namespace Content.Client.Commands
             EntitySystem.Get<VerbSystem>().Visibility = visibility;
         }
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         private bool TryParseArguments(IConsoleShell shell, string[] args, out MenuVisibility visibility)
         {
             visibility = MenuVisibility.Default;

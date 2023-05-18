@@ -45,5 +45,10 @@ namespace Content.Server.Administration.Commands
             var prefs = prefManager.GetPreferences(userId);
             prefs.AdminOOCColor = color.Value;
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

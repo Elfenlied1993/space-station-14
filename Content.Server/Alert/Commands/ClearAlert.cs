@@ -47,5 +47,10 @@ namespace Content.Server.Alert.Commands
 
             alertsSystem.ClearAlert(attachedEntity, alert.AlertType);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

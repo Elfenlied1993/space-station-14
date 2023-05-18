@@ -37,5 +37,10 @@ namespace Content.Server.GameTicking.Commands
                 shell.WriteError($"{player.Name} is not in the lobby.   This incident will be reported.");
             }
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

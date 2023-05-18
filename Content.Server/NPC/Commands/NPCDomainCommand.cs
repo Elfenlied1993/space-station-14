@@ -40,6 +40,11 @@ public sealed class NPCDomainCommand : IConsoleCommand
         }
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         var protoManager = IoCManager.Resolve<IPrototypeManager>();

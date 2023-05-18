@@ -64,5 +64,10 @@ namespace Content.Server.Administration.Commands
             else
                 EntitySystem.Get<SolutionContainerSystem>().TryRemoveReagent(uid, solution, args[2], quantity);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

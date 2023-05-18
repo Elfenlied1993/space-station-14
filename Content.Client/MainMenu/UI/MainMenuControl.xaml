@@ -1,29 +1,28 @@
-﻿<Control xmlns="https://spacestation14.io"
+<Control xmlns="https://spacestation14.io"
          xmlns:pllax="clr-namespace:Content.Client.Parallax"
          xmlns:clog="clr-namespace:Content.Client.Changelog">
     <pllax:ParallaxControl />
     <LayoutContainer>
+        <BoxContainer Name="MapListBox"
+                      Orientation="Vertical"
+                      StyleIdentifier="mainMenuVBox">
+
+            <ItemList Access="Public" Name="MapList" VerticalExpand="True" MinSize="400 650" />
+
+            <BoxContainer Orientation="Horizontal"
+                          SeparationOverride="4">
+                <Button Access="Public" Text ="{Loc 'main-menu-edit-button'}" Name="EditButton"  TextAlign="Center" StyleIdentifier="mainMenu"/>
+                <Button Access="Public" Text ="{Loc 'main-menu-delete-button'}" Name="DeleteButton"  TextAlign="Center" StyleIdentifier="mainMenu"/>
+            </BoxContainer>
+        </BoxContainer>
         <BoxContainer Name="VBox"
                       Orientation="Vertical"
                       StyleIdentifier="mainMenuVBox">
             <TextureRect Name="Logo"
                          Stretch="KeepCentered" />
-            <BoxContainer Orientation="Horizontal"
-                          SeparationOverride="4">
-                <Label Text="{Loc 'main-menu-username-label'}" />
-                <LineEdit Name="UsernameBox"
-                          Access="Public"
-                          PlaceHolder="{Loc 'main-menu-username-text'}"
-                          HorizontalExpand="True" />
-            </BoxContainer>
-            <LineEdit Name="AddressBox"
-                      Access="Public"
-                      Text="localhost"
-                      PlaceHolder="server address:port"
-                      HorizontalExpand="True" />
             <Button Name="DirectConnectButton"
                     Access="Public"
-                    Text="{Loc 'main-menu-direct-connect-button'}"
+                    Text="{Loc 'main-menu-create-button'}"
                     TextAlign="Center"
                     StyleIdentifier="mainMenu" />
             <Control MinSize="0 2" />
@@ -37,9 +36,7 @@
                     Text="{Loc 'main-menu-quit-button'}"
                     TextAlign="Center"
                     StyleIdentifier="mainMenu" />
-            <clog:ChangelogButton
-                Name="ChangelogButton"
-                Access="Public"/>
+
         </BoxContainer>
         <Label Name="VersionLabel" Text="v0.1" />
     </LayoutContainer>

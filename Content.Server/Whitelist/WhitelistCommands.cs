@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.Database;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -43,6 +43,16 @@ public sealed class AddWhitelistCommand : IConsoleCommand
 
         shell.WriteError(Loc.GetString("command-whitelistadd-not-found", ("username", args[0])));
     }
+
+    List<string> IConsoleCommand.ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        return ExecuteResult(shell, argStr, args);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 [AdminCommand(AdminFlags.Ban)]
@@ -79,6 +89,11 @@ public sealed class RemoveWhitelistCommand : IConsoleCommand
 
         shell.WriteError(Loc.GetString("command-whitelistremove-not-found", ("username", args[0])));
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 [AdminCommand(AdminFlags.Ban)]
@@ -112,5 +127,10 @@ public sealed class KickNonWhitelistedCommand : IConsoleCommand
             }
         }
 
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -103,5 +103,10 @@ namespace Content.Server.Construction.Commands
 
             shell.WriteLine($"Changed {changed} entities. If things seem wrong, reconnect.");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

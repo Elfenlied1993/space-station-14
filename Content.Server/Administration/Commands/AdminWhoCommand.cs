@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Shared.Administration;
@@ -43,5 +43,10 @@ public sealed class AdminWhoCommand : IConsoleCommand
         }
 
         shell.WriteLine(sb.ToString());
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -39,6 +39,11 @@ namespace Content.Server.Administration.Commands
             }
         }
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void PerformRejuvenate(EntityUid target)
         {
             var entityManager = IoCManager.Resolve<IEntityManager>();

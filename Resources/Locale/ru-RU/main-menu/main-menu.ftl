@@ -12,3 +12,6 @@ main-menu-join-public-server-button-tooltip = Нельзя подключать�
 main-menu-direct-connect-button = Прямое подключение
 main-menu-options-button = Настройки
 main-menu-quit-button = Выйти
+main-menu-edit-button = Изменить
+main-menu-delete-button = Удалить
+main-menu-create-button = Создать новую карту

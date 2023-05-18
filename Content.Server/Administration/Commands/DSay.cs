@@ -37,5 +37,10 @@ namespace Content.Server.Administration.Commands
             var chat = EntitySystem.Get<ChatSystem>();
             chat.TrySendInGameOOCMessage(entity, message, InGameOOCChatType.Dead, false, shell, player);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

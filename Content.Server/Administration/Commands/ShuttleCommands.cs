@@ -30,6 +30,11 @@ namespace Content.Server.Administration.Commands
                 EntitySystem.Get<RoundEndSystem>().RequestRoundEnd(shell.Player?.AttachedEntity, false);
             }
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [AdminCommand(AdminFlags.Round)]
@@ -42,6 +47,11 @@ namespace Content.Server.Administration.Commands
         public void Execute(IConsoleShell shell, string argStr, string[] args)
         {
             EntitySystem.Get<RoundEndSystem>().CancelRoundEndCountdown(shell.Player?.AttachedEntity, false);
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

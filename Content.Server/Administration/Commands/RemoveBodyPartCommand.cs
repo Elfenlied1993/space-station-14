@@ -37,5 +37,10 @@ namespace Content.Server.Administration.Commands
                 shell.WriteError("Was not a body part, or did not have a parent.");
             }
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

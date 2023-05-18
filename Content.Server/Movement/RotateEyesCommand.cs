@@ -41,4 +41,9 @@ public sealed class RotateEyesCommand : IConsoleCommand
 
         shell.WriteLine(Loc.GetString("rotateeyes-command-count", ("count", count)));
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

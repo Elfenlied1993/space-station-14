@@ -56,5 +56,10 @@ namespace Content.Server.Administration.Commands
 
             mind!.TransferTo(target);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

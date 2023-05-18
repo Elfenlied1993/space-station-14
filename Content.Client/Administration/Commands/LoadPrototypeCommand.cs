@@ -16,6 +16,11 @@ public sealed class LoadPrototypeCommand : IConsoleCommand
         LoadPrototype();
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public static async void LoadPrototype()
     {
         var dialogManager = IoCManager.Resolve<IFileDialogManager>();

@@ -42,6 +42,11 @@ namespace Content.Server.Mind.Commands
             MakeSentient(entId, entityManager, true, true);
         }
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void MakeSentient(EntityUid uid, IEntityManager entityManager, bool allowMovement = true, bool allowSpeech = true)
         {
             entityManager.EnsureComponent<MindComponent>(uid);

@@ -34,4 +34,9 @@ public sealed class AddPolymorphActionCommand : IConsoleCommand
         entityManager.EnsureComponent<PolymorphableComponent>(entityUid);
         polySystem.CreatePolymorphAction(args[1], entityUid);
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

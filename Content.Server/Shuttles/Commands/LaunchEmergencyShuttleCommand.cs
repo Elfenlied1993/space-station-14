@@ -21,4 +21,9 @@ public sealed class LaunchEmergencyShuttleCommand : IConsoleCommand
         var system = _sysManager.GetEntitySystem<EmergencyShuttleSystem>();
         system.EarlyLaunch();
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

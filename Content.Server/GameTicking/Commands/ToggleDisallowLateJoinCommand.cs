@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Robust.Shared.Configuration;
@@ -32,6 +32,11 @@ namespace Content.Server.GameTicking.Commands
             {
                 shell.WriteLine("Invalid argument.");
             }
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -33,6 +33,11 @@ namespace Content.Server.GameTicking.Commands
             shell.WriteLine(Loc.GetString("forcemap-command-success", ("map", name)));
         }
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             if (args.Length == 1)

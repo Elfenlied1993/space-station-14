@@ -45,5 +45,10 @@ namespace Content.Server.Atmos.Commands
 
             shell.WriteLine($"Changed the temperature of {tiles} tiles.");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

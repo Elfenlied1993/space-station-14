@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration.Logs;
+using Content.Server.Administration.Logs;
 using Content.Server.EUI;
 using Content.Shared.Administration;
 using Robust.Server.Player;
@@ -24,5 +24,10 @@ public sealed class OpenAdminLogsCommand : IConsoleCommand
         var eui = IoCManager.Resolve<EuiManager>();
         var ui = new AdminLogsEui();
         eui.OpenEui(ui, player);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

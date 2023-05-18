@@ -37,6 +37,11 @@ namespace Content.Server.Atmos.Commands
             else
                 tile.Remove(amount);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

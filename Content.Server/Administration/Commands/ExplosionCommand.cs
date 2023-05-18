@@ -31,6 +31,11 @@ public sealed class OpenExplosionEui : IConsoleCommand
         var ui = new SpawnExplosionEui();
         eui.OpenEui(ui, player);
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 [AdminCommand(AdminFlags.Fun)] // for the admin. Not so much for anyone else.
@@ -132,5 +137,10 @@ public sealed class ExplosionCommand : IConsoleCommand
 
         var sysMan = IoCManager.Resolve<IEntitySystemManager>();
         sysMan.GetEntitySystem<ExplosionSystem>().QueueExplosion(coords, type.ID, intensity, slope, maxIntensity);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

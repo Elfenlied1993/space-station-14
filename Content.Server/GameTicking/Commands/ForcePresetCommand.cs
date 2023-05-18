@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Administration;
 using Content.Server.GameTicking.Presets;
 using Content.Shared.Administration;
@@ -39,6 +39,11 @@ namespace Content.Server.GameTicking.Commands
             ticker.SetGamePreset(type, true);
             shell.WriteLine($"Forced the game to start with preset {name}.");
             ticker.UpdateInfoText();
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

@@ -100,6 +100,11 @@ public sealed class RenameCommand : IConsoleCommand
         }
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     private static bool TryParseUid(string str, IConsoleShell shell,
         IEntityManager entMan, out EntityUid entityUid)
     {

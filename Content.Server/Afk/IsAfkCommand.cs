@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Shared.Administration;
 using Robust.Server.Player;
 using Robust.Shared.Console;
@@ -31,6 +31,11 @@ namespace Content.Server.Afk
             }
 
             shell.WriteLine(afkManager.IsAfk(player) ? "They are indeed AFK" : "They are not AFK");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

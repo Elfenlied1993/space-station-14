@@ -1,4 +1,4 @@
-﻿using Content.Server.Storage.Components;
+using Content.Server.Storage.Components;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
@@ -64,5 +64,10 @@ public sealed class LinkBluespaceLocker : IConsoleCommand
             targetBluespaceComponent.BehaviorProperties.TransportEntities = false;
             targetBluespaceComponent.BehaviorProperties.TransportGas = false;
         }
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

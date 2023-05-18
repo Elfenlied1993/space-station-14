@@ -101,5 +101,10 @@ namespace Content.Server.Construction.Commands
 
             shell.WriteLine($"Changed {changed} tiles.");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

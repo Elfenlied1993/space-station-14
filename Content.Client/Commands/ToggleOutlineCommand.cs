@@ -24,5 +24,10 @@ namespace Content.Client.Commands
             configurationManager.SetCVar(cvar, !old);
             shell.WriteLine($"Draw outlines set to: {configurationManager.GetCVar(cvar)}");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

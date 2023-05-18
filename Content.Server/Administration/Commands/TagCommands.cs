@@ -1,4 +1,4 @@
-﻿using Content.Shared.Administration;
+using Content.Shared.Administration;
 using Content.Shared.Tag;
 using Robust.Shared.Console;
 
@@ -39,6 +39,11 @@ namespace Content.Server.Administration.Commands
             {
                 shell.WriteError(Loc.GetString("addtag-command-fail", ("tag", args[1]), ("target", entityUid)));
             }
+        }
+
+        public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
@@ -92,6 +97,11 @@ namespace Content.Server.Administration.Commands
             {
                 shell.WriteError(Loc.GetString("removetag-command-fail", ("tag", args[1]), ("target", entityUid)));
             }
+        }
+
+        public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

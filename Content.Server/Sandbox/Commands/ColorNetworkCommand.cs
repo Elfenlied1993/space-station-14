@@ -71,6 +71,11 @@ namespace Content.Server.Sandbox.Commands
             PaintNodes(nodeContainerComponent, nodeGroupId, color.Value);
         }
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         private void PaintNodes(NodeContainerComponent nodeContainerComponent, NodeGroupID nodeGroupId, Color color)
         {
             var group = nodeContainerComponent.Nodes[nodeGroupId.ToString().ToLower()].NodeGroup;

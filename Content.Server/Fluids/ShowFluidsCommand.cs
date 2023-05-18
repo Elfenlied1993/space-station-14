@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.Fluids.EntitySystems;
 using Content.Shared.Administration;
 using Robust.Server.Player;
@@ -28,5 +28,10 @@ public sealed class ShowFluidsCommand : IConsoleCommand
         shell.WriteLine(enabled
             ? "Enabled the puddle debug overlay."
             : "Disabled the puddle debug overlay.");
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

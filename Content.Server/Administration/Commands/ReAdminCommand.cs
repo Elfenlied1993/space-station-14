@@ -32,5 +32,10 @@ namespace Content.Server.Administration.Commands
 
             mgr.ReAdmin(player);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

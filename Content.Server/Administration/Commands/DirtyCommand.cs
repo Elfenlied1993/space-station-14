@@ -35,6 +35,11 @@ public sealed class DirtyCommand : IConsoleCommand
         }
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     private static void DirtyAll(IEntityManager manager, EntityUid entityUid)
     {
         foreach (var component in manager.GetComponents(entityUid))

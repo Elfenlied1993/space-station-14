@@ -52,4 +52,9 @@ public sealed class ResaveCommand : LocalizedCommands
             _mapManager.DeleteMap(mapId);
         }
     }
+
+    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -27,5 +27,10 @@ namespace Content.Server.GameTicking.Commands
             var ticker = EntitySystem.Get<GameTicker>();
             ticker.ToggleReady(player, bool.Parse(args[0]));
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

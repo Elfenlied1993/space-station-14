@@ -50,5 +50,10 @@ namespace Content.Server.Atmos.Commands
 
             shell.WriteLine($"Added atmosphere to grid {euid}.");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

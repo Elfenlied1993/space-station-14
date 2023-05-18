@@ -28,4 +28,9 @@ public sealed class LockEyesCommand : IConsoleCommand
         var system = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<SharedMoverController>();
         system.CameraRotationLocked = value;
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
 using Content.Shared.Roles;
@@ -50,6 +50,11 @@ public sealed class RoleBanCommand : IConsoleCommand
         }
 
         IoCManager.Resolve<RoleBanManager>().CreateJobBan(shell, target, job, reason, minutes);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Text;
 using Content.Server.Database;
 using Content.Shared.Administration;
@@ -48,6 +48,11 @@ public sealed class BanExemptionUpdateCommand : LocalizedCommands
             "cmd-ban_exemption_update-success",
             ("player", player),
             ("uid", playerData.UserId)));
+    }
+
+    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
@@ -110,6 +115,11 @@ public sealed class BanExemptionGetCommand : LocalizedCommands
         shell.WriteLine(LocalizationManager.GetString(
             "cmd-ban_exemption_get-show",
             ("flags", joined.ToString())));
+    }
+
+    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

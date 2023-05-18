@@ -1,4 +1,4 @@
-﻿using Content.Server.Storage.Components;
+using Content.Server.Storage.Components;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
@@ -29,5 +29,10 @@ public sealed class ClearBluespaceLockerLinks : IConsoleCommand
 
         if (entityManager.TryGetComponent<BluespaceLockerComponent>(entityUid, out var originComponent))
             entityManager.RemoveComponent(entityUid, originComponent);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

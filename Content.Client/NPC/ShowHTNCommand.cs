@@ -13,4 +13,9 @@ public sealed class ShowHTNCommand : IConsoleCommand
         var npcs = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<HTNSystem>();
         npcs.EnableOverlay ^= true;
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

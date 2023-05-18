@@ -46,6 +46,11 @@ namespace Content.Server.Voting
             mgr.CreateStandardVote((IPlayerSession?) shell.Player, type);
         }
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             if (args.Length == 1)
@@ -116,6 +121,11 @@ namespace Content.Server.Voting
                     chatMgr.DispatchServerAnnouncement(Loc.GetString("cmd-customvote-on-finished-win",("winner", args[(int) eventArgs.Winner])));
                 }
             };
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
@@ -189,6 +199,11 @@ namespace Content.Server.Voting
 
             vote.CastVote((IPlayerSession) shell.Player!, optionN);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [AnyCommand]
@@ -206,6 +221,11 @@ namespace Content.Server.Voting
             {
                 shell.WriteLine($"[{vote.Id}] {vote.InitiatorText}: {vote.Title}");
             }
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -239,6 +259,11 @@ namespace Content.Server.Voting
             else
                 _adminLogger.Add(LogType.Vote, LogImpact.Medium, $"Canceled vote: {vote.Title}");
             vote.Cancel();
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

@@ -1,13 +1,16 @@
 using System.Text.RegularExpressions;
+using System.Threading;
 using Content.Client.MainMenu.UI;
 using Content.Client.UserInterface.Systems.EscapeMenu;
 using Robust.Client;
+using Robust.Client.Console;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using UsernameHelpers = Robust.Shared.AuthLib.UsernameHelpers;
 
@@ -19,15 +22,19 @@ namespace Content.Client.MainMenu
     // Instantiated dynamically through the StateManager, Dependencies will be resolved.
     public sealed class MainScreen : Robust.Client.State.State
     {
+
         [Dependency] private readonly IBaseClient _client = default!;
         [Dependency] private readonly IClientNetManager _netManager = default!;
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
         [Dependency] private readonly IGameController _controllerProxy = default!;
         [Dependency] private readonly IResourceCache _resourceCache = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
-
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
         private MainMenuControl _mainMenuControl = default!;
         private bool _isConnecting;
+        private static readonly string UserName = "Elfen";
+        private const string Address = "localhost";
 
         // ReSharper disable once InconsistentNaming
         private static readonly Regex IPv6Regex = new(@"\[(.*:.*:.*)](?::(\d+))?");
@@ -41,12 +48,23 @@ namespace Content.Client.MainMenu
             _mainMenuControl.QuitButton.OnPressed += QuitButtonPressed;
             _mainMenuControl.OptionsButton.OnPressed += OptionsButtonPressed;
             _mainMenuControl.DirectConnectButton.OnPressed += DirectConnectButtonPressed;
-            _mainMenuControl.AddressBox.OnTextEntered += AddressBoxEntered;
-            _mainMenuControl.ChangelogButton.OnPressed += ChangelogButtonPressed;
+            //_mainMenuControl.AddressBox.OnTextEntered += AddressBoxEntered;
+            //_mainMenuControl.ChangelogButton.OnPressed += ChangelogButtonPressed;
+            Test();
 
+            _mainMenuControl.MapList.AddItem("Test");
+            _mainMenuControl.MapList.AddItem("Test1");
+            _mainMenuControl.MapList.AddItem("Test2");
+            _mainMenuControl.MapList.AddItem("Test3");
             _client.RunLevelChanged += RunLevelChanged;
         }
 
+        private async void Test()
+        {
+          
+            var result = _consoleHost.ExecuteCommandResult(null, "lsmap");
+            var maplist = result;
+        }
         /// <inheritdoc />
         protected override void Shutdown()
         {
@@ -73,8 +91,7 @@ namespace Content.Client.MainMenu
 
         private void DirectConnectButtonPressed(BaseButton.ButtonEventArgs args)
         {
-            var input = _mainMenuControl.AddressBox;
-            TryConnect(input.Text);
+            TryConnect(Address);
         }
 
         private void AddressBoxEntered(LineEdit.LineEditEventArgs args)
@@ -89,8 +106,8 @@ namespace Content.Client.MainMenu
 
         private void TryConnect(string address)
         {
-            var inputName = _mainMenuControl.UsernameBox.Text.Trim();
-            if (!UsernameHelpers.IsNameValid(inputName, out var reason))
+
+            if (!UsernameHelpers.IsNameValid(UserName, out var reason))
             {
                 var invalidReason = Loc.GetString(reason.ToText());
                 _userInterfaceManager.Popup(
@@ -100,9 +117,9 @@ namespace Content.Client.MainMenu
             }
 
             var configName = _configurationManager.GetCVar(CVars.PlayerName);
-            if (_mainMenuControl.UsernameBox.Text != configName)
+            if (UserName != configName)
             {
-                _configurationManager.SetCVar(CVars.PlayerName, inputName);
+                _configurationManager.SetCVar(CVars.PlayerName, UserName);
                 _configurationManager.SaveToFile();
             }
 
@@ -176,7 +193,7 @@ namespace Content.Client.MainMenu
 
         private void _onConnectFailed(object? _, NetConnectFailArgs args)
         {
-            _userInterfaceManager.Popup(Loc.GetString("main-menu-failed-to-connect",("reason", args.Reason)));
+            _userInterfaceManager.Popup(Loc.GetString("main-menu-failed-to-connect", ("reason", args.Reason)));
             _netManager.ConnectFailed -= _onConnectFailed;
             _setConnectingState(false);
         }

@@ -73,4 +73,9 @@ public sealed class UploadFolder : IConsoleCommand
 
         shell.WriteLine( Loc.GetString("uploadfolder-command-success",("fileCount",fileCount)));
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

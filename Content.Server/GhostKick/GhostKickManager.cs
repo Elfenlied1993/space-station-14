@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.GhostKick;
 using Robust.Server.Player;
@@ -72,5 +72,10 @@ public sealed class GhostKickCommand : IConsoleCommand
         }
 
         ghostKick.DoDisconnect(player.ConnectedClient, reason);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

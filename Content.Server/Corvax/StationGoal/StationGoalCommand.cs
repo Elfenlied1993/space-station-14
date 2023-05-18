@@ -36,7 +36,12 @@ namespace Content.Server.Corvax.StationGoal
                 return;
             }
         }
-        
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             if (args.Length == 1)

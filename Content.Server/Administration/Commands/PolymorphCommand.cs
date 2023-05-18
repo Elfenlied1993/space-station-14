@@ -44,4 +44,9 @@ public sealed class PolymorphCommand : IConsoleCommand
         entityManager.EnsureComponent<PolymorphableComponent>(entityUid);
         polySystem.PolymorphEntity(entityUid, polyproto);
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

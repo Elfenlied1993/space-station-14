@@ -29,5 +29,10 @@ namespace Content.Server.Atmos.Commands
                 ? "Enabled the atmospherics debug overlay."
                 : "Disabled the atmospherics debug overlay.");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

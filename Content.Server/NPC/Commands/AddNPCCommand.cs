@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.NPC.HTN;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
@@ -41,6 +41,11 @@ namespace Content.Server.NPC.Commands
             var comp = _entities.AddComponent<HTNComponent>(entId);
             comp.RootTask = args[1];
             shell.WriteLine("AI component added.");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

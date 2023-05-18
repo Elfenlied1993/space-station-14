@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.Popups;
 using Robust.Shared.Console;
@@ -19,6 +19,11 @@ namespace Content.Server.Popups
             var msg = args[2];
 
             source.PopupMessage(viewer, msg);
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

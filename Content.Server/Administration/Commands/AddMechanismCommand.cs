@@ -43,5 +43,10 @@ namespace Content.Server.Administration.Commands
                 shell.WriteError($@"Could not add {organId} to {partId}.");
             }
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -23,4 +23,9 @@ public sealed class ListStationsCommand : IConsoleCommand
             shell.WriteLine($"{station, -10} | {name}");
         }
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

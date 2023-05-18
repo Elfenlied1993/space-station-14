@@ -40,5 +40,10 @@ namespace Content.Server.Chat.Commands
             IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<ChatSystem>()
                 .TrySendInGameICMessage(playerEntity, message, InGameICChatType.Speak, ChatTransmitRange.Normal, shell, player);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

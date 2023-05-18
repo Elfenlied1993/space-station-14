@@ -1,4 +1,4 @@
-﻿using Content.Shared.Administration;
+using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Robust.Shared.Prototypes;
 
@@ -55,6 +55,11 @@ namespace Content.Server.Administration.Commands
             }
 
             shell.WriteLine($"Removed {components} components from {entities} entities{(id == null ? "." : $" with id {id}")}");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

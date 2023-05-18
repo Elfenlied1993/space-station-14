@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.EntityList;
 using Robust.Server.Player;
@@ -52,6 +52,11 @@ namespace Content.Server.EntityList
             }
 
             shell.WriteLine($"Spawned {i} entities.");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

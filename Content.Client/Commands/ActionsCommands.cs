@@ -1,4 +1,4 @@
-﻿using Content.Client.Actions;
+using Content.Client.Actions;
 using Content.Client.Mapping;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
@@ -63,6 +63,11 @@ public sealed class LoadActionsCommand : IConsoleCommand
             shell.WriteLine("Failed to load action assignments");
         }
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 [AnyCommand]
@@ -84,5 +89,10 @@ public sealed class LoadMappingActionsCommand : IConsoleCommand
         {
             shell.WriteLine("Failed to load action assignments");
         }
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

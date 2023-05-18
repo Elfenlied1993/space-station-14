@@ -1,4 +1,4 @@
-﻿using Content.Shared.Administration;
+using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
@@ -37,5 +37,10 @@ public sealed class PanicBunkerCommand : IConsoleCommand
         _cfg.SetCVar(CCVars.PanicBunkerEnabled, enabled);
         
         shell.WriteLine(Loc.GetString(enabled ? "panicbunker-command-enabled" : "panicbunker-command-disabled"));
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

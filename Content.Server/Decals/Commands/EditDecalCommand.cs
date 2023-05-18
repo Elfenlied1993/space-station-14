@@ -155,4 +155,9 @@ Possible modes are:\n
                 return;
         }
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

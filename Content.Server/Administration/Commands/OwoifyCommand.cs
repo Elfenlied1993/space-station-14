@@ -40,4 +40,9 @@ public sealed class OwoifyCommand : IConsoleCommand
         meta.EntityName = owoSys.Accentuate(meta.EntityName);
         meta.EntityDescription = owoSys.Accentuate(meta.EntityDescription);
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

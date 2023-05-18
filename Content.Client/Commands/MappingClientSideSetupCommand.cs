@@ -30,5 +30,10 @@ internal sealed class MappingClientSideSetupCommand : IConsoleCommand
             shell.ExecuteCommand("loadmapacts");
         }
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }
 

@@ -1,4 +1,4 @@
-﻿using Content.Server.Players.PlayTimeTracking;
+using Content.Server.Players.PlayTimeTracking;
 using Content.Shared.Administration;
 using Content.Shared.Players.PlayTimeTracking;
 using Robust.Server.Player;
@@ -43,6 +43,11 @@ public sealed class PlayTimeAddOverallCommand : IConsoleCommand
             "cmd-playtime_addoverall-succeed",
             ("username", args[0]),
             ("time", overall)));
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
@@ -100,6 +105,11 @@ public sealed class PlayTimeAddRoleCommand : IConsoleCommand
             ("time", time)));
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
@@ -153,6 +163,11 @@ public sealed class PlayTimeGetOverallCommand : IConsoleCommand
             "cmd-playtime_getoverall-success",
             ("username", userName),
             ("time", value)));
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
@@ -224,6 +239,11 @@ public sealed class PlayTimeGetRoleCommand : IConsoleCommand
         }
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
@@ -276,6 +296,11 @@ public sealed class PlayTimeSaveCommand : IConsoleCommand
         shell.WriteLine(Loc.GetString("cmd-playtime_save-succeed", ("username", name)));
     }
 
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
@@ -321,6 +346,11 @@ public sealed class PlayTimeFlushCommand : IConsoleCommand
         }
 
         _playTimeTracking.FlushTracker(pSession);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

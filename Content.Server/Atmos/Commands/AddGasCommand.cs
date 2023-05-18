@@ -44,5 +44,10 @@ namespace Content.Server.Atmos.Commands
 
             tile.AdjustMoles(gasId, moles);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

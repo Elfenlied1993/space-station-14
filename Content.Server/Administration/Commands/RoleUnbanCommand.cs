@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Content.Server.Database;
 using Content.Shared.Administration;
 using Robust.Server.Player;
@@ -56,6 +56,11 @@ public sealed class RoleUnbanCommand : IConsoleCommand
         await dbMan.AddServerRoleUnbanAsync(new ServerRoleUnbanDef(banId, player?.UserId, DateTimeOffset.Now));
 
         shell.WriteLine($"Pardoned ban with id {banId}");
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

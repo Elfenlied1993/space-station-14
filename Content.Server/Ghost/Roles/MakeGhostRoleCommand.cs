@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Mind.Components;
 using Content.Shared.Administration;
@@ -65,6 +65,11 @@ namespace Content.Server.Ghost.Roles
             ghostRole.RoleRules = rules;
 
             shell.WriteLine($"Made entity {metaData.EntityName} a ghost role.");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

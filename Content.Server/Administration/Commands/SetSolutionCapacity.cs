@@ -56,5 +56,10 @@ namespace Content.Server.Administration.Commands
             var quantity = FixedPoint2.New(quantityFloat);
             EntitySystem.Get<SolutionContainerSystem>().SetCapacity(uid, solution, quantity);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

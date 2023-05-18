@@ -40,5 +40,10 @@ namespace Content.Server.Decals.Commands
 
             shell.WriteError($"Failed trying to remove decal {uid}.");
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -109,5 +109,10 @@ namespace Content.Server.Decals.Commands
                 shell.WriteError($"Failed adding decal.");
             }
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -55,5 +55,10 @@ namespace Content.Server.GameTicking.Commands
 
             ticker.Respawn(targetPlayer);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

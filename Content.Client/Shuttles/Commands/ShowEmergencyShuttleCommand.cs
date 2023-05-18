@@ -14,4 +14,9 @@ public sealed class ShowEmergencyShuttleCommand : IConsoleCommand
         tstalker.EnableShuttlePosition ^= true;
         shell.WriteLine($"Set emergency shuttle debug to {tstalker.EnableShuttlePosition}");
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

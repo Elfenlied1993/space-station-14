@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.Players;
 using Content.Shared.Administration;
 using Robust.Server.Player;
@@ -48,6 +48,11 @@ namespace Content.Server.Objectives.Commands
                 shell.WriteLine("Objective requirements dont allow that objective to be added.");
             }
 
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

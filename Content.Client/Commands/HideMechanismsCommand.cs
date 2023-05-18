@@ -1,4 +1,4 @@
-﻿using Content.Shared.Body.Organ;
+using Content.Shared.Body.Organ;
 using Robust.Client.Console;
 using Robust.Client.GameObjects;
 using Robust.Shared.Console;
@@ -40,6 +40,11 @@ namespace Content.Client.Commands
             }
 
             IoCManager.Resolve<IClientConsoleHost>().ExecuteCommand("hidecontainedcontext");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

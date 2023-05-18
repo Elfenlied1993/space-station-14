@@ -17,4 +17,9 @@ public sealed class GetMotdCommand : LocalizedCommands
     {
         _entityManager.EntitySysManager.GetEntitySystem<MOTDSystem>().TrySendMOTD(shell);
     }
+
+    public override List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

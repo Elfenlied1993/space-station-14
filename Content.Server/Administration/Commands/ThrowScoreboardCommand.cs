@@ -1,4 +1,4 @@
-﻿using Content.Server.GameTicking;
+using Content.Server.GameTicking;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
@@ -21,5 +21,10 @@ public sealed class ThrowScoreboardCommand : IConsoleCommand
             return;
         }
         EntitySystem.Get<GameTicker>().ShowRoundEndScoreboard();
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Administration;
 using Content.Server.GameTicking.Presets;
 using Content.Shared.Administration;
@@ -35,6 +35,11 @@ namespace Content.Server.GameTicking.Commands
 
             ticker.SetGamePreset(preset);
             shell.WriteLine(Loc.GetString("set-game-preset-preset-set", ("preset", preset.ID)));
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

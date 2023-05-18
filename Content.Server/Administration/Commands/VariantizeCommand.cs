@@ -1,4 +1,4 @@
-﻿using Content.Shared.Administration;
+using Content.Shared.Administration;
 using Content.Shared.Maps;
 using Robust.Shared.Console;
 using Robust.Shared.Map;
@@ -45,5 +45,10 @@ public sealed class VariantizeCommand : IConsoleCommand
             var newTile = new Tile(tile.Tile.TypeId, tile.Tile.Flags, random.Pick(def.PlacementVariants));
             gridComp.SetTile(tile.GridIndices, newTile);
         }
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

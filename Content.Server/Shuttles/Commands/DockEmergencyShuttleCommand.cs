@@ -21,4 +21,9 @@ public sealed class DockEmergencyShuttleCommand : IConsoleCommand
         var system = _sysManager.GetEntitySystem<EmergencyShuttleSystem>();
         system.CallEmergencyShuttle();
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

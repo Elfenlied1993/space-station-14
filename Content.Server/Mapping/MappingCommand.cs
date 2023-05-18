@@ -23,6 +23,11 @@ namespace Content.Server.Mapping
         public string Description => Loc.GetString("cmd-mapping-desc");
         public string Help => Loc.GetString("cmd-mapping-help");
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             switch (args.Length)

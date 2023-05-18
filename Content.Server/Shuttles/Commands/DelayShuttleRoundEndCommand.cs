@@ -29,4 +29,9 @@ public sealed class DelayRoundEndCommand : IConsoleCommand
             shell.WriteLine(Loc.GetString("emergency-shuttle-command-round-no"));
         }
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

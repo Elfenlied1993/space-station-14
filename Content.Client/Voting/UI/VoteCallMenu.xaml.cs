@@ -166,5 +166,10 @@ namespace Content.Client.Voting.UI
         {
             new VoteCallMenu().OpenCentered();
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

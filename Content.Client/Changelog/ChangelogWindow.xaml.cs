@@ -207,5 +207,10 @@ namespace Content.Client.Changelog
         {
             IoCManager.Resolve<IUserInterfaceManager>().GetUIController<ChangelogUIController>().OpenWindow();
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

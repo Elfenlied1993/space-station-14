@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Shared.Administration;
 using Content.Shared.Database;
@@ -58,6 +58,11 @@ public sealed class AdminLogBulk : IConsoleCommand
         }
 
         shell.WriteLine($"Added {amount} logs in {stopwatch.Elapsed.TotalMilliseconds} ms");
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }
 #endif

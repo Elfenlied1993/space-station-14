@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.Roles;
 using Robust.Shared.Console;
@@ -28,6 +28,11 @@ namespace Content.Server.Roles
             {
                 shell.WriteLine(job.ID);
             }
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

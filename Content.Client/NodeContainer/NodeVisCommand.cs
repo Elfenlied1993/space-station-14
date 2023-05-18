@@ -24,6 +24,11 @@ namespace Content.Client.NodeContainer
             var sys = EntitySystem.Get<NodeGroupSystem>();
             sys.SetVisEnabled(!sys.VisEnabled);
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public sealed class NodeVisFilterCommand : IConsoleCommand
@@ -51,6 +56,11 @@ namespace Content.Client.NodeContainer
                     sys.Filtered.Remove(filter);
                 }
             }
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Content.Shared.Administration;
+using Content.Shared.Administration;
 using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands
@@ -34,6 +34,11 @@ namespace Content.Server.Administration.Commands
 
             entityManager.DeleteEntity(id);
             shell.WriteLine($"Deleted entity with id {id}.");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

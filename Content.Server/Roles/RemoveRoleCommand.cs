@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.Players;
 using Content.Shared.Administration;
 using Content.Shared.Roles;
@@ -44,6 +44,11 @@ namespace Content.Server.Roles
 
             var role = new Job(mind, _prototypeManager.Index<JobPrototype>(args[1]));
             mind.RemoveRole(role);
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

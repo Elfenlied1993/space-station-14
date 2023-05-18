@@ -1,4 +1,4 @@
-﻿using Content.Client.HealthOverlay;
+using Content.Client.HealthOverlay;
 using Robust.Shared.Console;
 using Robust.Shared.GameObjects;
 
@@ -16,6 +16,11 @@ namespace Content.Client.Commands
             system.Enabled = !system.Enabled;
 
             shell.WriteLine($"Health overlay system {(system.Enabled ? "enabled" : "disabled")}.");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

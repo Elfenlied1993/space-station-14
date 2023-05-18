@@ -42,5 +42,10 @@ namespace Content.Server.Power
             battery.CurrentCharge = (battery.MaxCharge * percent) / 100;
             // Don't acknowledge b/c people WILL forall this
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

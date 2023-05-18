@@ -22,6 +22,11 @@ namespace Content.Server.Damage.Commands
             _prototypeManager = IoCManager.Resolve<IPrototypeManager>();
         }
 
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             if (args.Length == 1)

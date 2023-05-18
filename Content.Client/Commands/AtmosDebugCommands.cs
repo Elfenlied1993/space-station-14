@@ -39,6 +39,11 @@ namespace Content.Client.Commands
             sys.CfgBase = xStart;
             sys.CfgScale = xEnd - xStart;
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [UsedImplicitly]
@@ -95,6 +100,11 @@ namespace Content.Client.Commands
             sys.CfgBase = xBase;
             sys.CfgScale = xScale;
         }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [UsedImplicitly]
@@ -117,6 +127,11 @@ namespace Content.Client.Commands
             }
             var sys = EntitySystem.Get<AtmosDebugOverlaySystem>();
             sys.CfgCBM = xFlag;
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Robust.Shared.Console;
+using Robust.Shared.Console;
 using Robust.Shared.GameObjects;
 
 namespace Content.Client.Decals;
@@ -11,5 +11,10 @@ public sealed class ToggleDecalCommand : IConsoleCommand
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
         EntitySystem.Get<DecalSystem>().ToggleOverlay();
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
@@ -20,6 +20,11 @@ namespace Content.Server.Power.Commands
             shell.WriteLine($"loads: {stats.CountLoads}");
             shell.WriteLine($"supplies: {stats.CountSupplies}");
             shell.WriteLine($"batteries: {stats.CountBatteries}");
+        }
+
+        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 }

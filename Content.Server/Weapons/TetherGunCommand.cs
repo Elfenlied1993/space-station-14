@@ -22,4 +22,9 @@ public sealed class TetherGunCommand : IConsoleCommand
         else
             shell.WriteLine("Tether gun toggled off");
     }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

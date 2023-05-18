@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Info;
@@ -62,5 +62,10 @@ public sealed class ShowRulesCommand : IConsoleCommand
 
         var player = IoCManager.Resolve<IPlayerManager>().GetSessionByUserId(located.UserId);
         netManager.ServerSendMessage(message, player.ConnectedClient);
+    }
+
+    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
+    {
+        throw new NotImplementedException();
     }
 }
