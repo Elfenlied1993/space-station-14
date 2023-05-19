@@ -150,6 +150,11 @@ namespace Content.Client.Entry
             _configManager.SetCVar("interface.resolutionAutoScaleMinimum", 0.5f);
         }
 
+        public override void ReloadMap()
+        {
+            base.ReloadMap();
+        }
+
         public override void PostInit()
         {
             base.PostInit();

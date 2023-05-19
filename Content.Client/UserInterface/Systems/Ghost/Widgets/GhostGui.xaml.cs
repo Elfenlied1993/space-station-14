@@ -23,9 +23,9 @@ public sealed partial class GhostGui : UIWidget
 
         MouseFilter = MouseFilterMode.Ignore;
 
-        GhostWarpButton.OnPressed += _ => RequestWarpsPressed?.Invoke();
-        ReturnToBodyButton.OnPressed += _ => ReturnToBodyPressed?.Invoke();
-        GhostRolesButton.OnPressed += _ => GhostRolesPressed?.Invoke();
+        //GhostWarpButton.OnPressed += _ => RequestWarpsPressed?.Invoke();
+        //ReturnToBodyButton.OnPressed += _ => ReturnToBodyPressed?.Invoke();
+        //GhostRolesButton.OnPressed += _ => GhostRolesPressed?.Invoke();
     }
 
     public void Hide()
@@ -36,20 +36,20 @@ public sealed partial class GhostGui : UIWidget
 
     public void Update(int? roles, bool? canReturnToBody)
     {
-        ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
+        //ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
 
-        if (roles != null)
-        {
-            GhostRolesButton.Text = Loc.GetString("ghost-gui-ghost-roles-button", ("count", roles));
-            if (roles > 0)
-            {
-                GhostRolesButton.StyleClasses.Add(StyleBase.ButtonCaution);
-            }
-            else
-            {
-                GhostRolesButton.StyleClasses.Remove(StyleBase.ButtonCaution);
-            }
-        }
+        //if (roles != null)
+        //{
+        //    GhostRolesButton.Text = Loc.GetString("ghost-gui-ghost-roles-button", ("count", roles));
+        //    if (roles > 0)
+        //    {
+        //        GhostRolesButton.StyleClasses.Add(StyleBase.ButtonCaution);
+        //    }
+        //    else
+        //    {
+        //        GhostRolesButton.StyleClasses.Remove(StyleBase.ButtonCaution);
+        //    }
+        //}
 
         TargetWindow.Populate();
     }

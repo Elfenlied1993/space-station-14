@@ -1,4 +1,4 @@
-﻿using Content.Client.Administration.Managers;
+using Content.Client.Administration.Managers;
 using Content.Client.Administration.Systems;
 using Content.Client.Administration.UI;
 using Content.Client.Administration.UI.Tabs.ObjectsTab;
@@ -13,6 +13,7 @@ using Robust.Client.Console;
 using Robust.Client.Input;
 using Robust.Client.UserInterface.Controllers;
 using Robust.Client.UserInterface.Controls;
+using Robust.Client.UserInterface.CustomControls;
 using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
 using static Robust.Client.UserInterface.Controls.BaseButton;
@@ -72,7 +73,6 @@ public sealed class AdminUIController : UIController, IOnStateEntered<GameplaySt
 
         _window = UIManager.CreateWindow<AdminMenuWindow>();
         LayoutContainer.SetAnchorPreset(_window, LayoutContainer.LayoutPreset.Center);
-
         _window.PlayerTabControl.OnEntryPressed += PlayerTabEntryPressed;
         _window.ObjectsTabControl.OnEntryPressed += ObjectsTabEntryPressed;
         _window.OnOpen += OnWindowOpen;
@@ -125,6 +125,7 @@ public sealed class AdminUIController : UIController, IOnStateEntered<GameplaySt
         _window.OnOpen -= OnWindowOpen;
         _window.OnClose -= OnWindowClosed;
         _window.OnDisposed -= OnWindowDisposed;
+        _window?.Open();
         _window = null;
     }
 

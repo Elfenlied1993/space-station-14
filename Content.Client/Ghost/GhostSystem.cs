@@ -79,12 +79,12 @@ namespace Content.Client.Ghost
         {
             if (TryComp(component.Owner, out SpriteComponent? sprite))
             {
-                sprite.Visible = GhostVisibility;
+                sprite.Visible = false;
             }
 
             _actions.AddAction(uid, component.ToggleLightingAction, null);
             _actions.AddAction(uid, component.ToggleFoVAction, null);
-            _actions.AddAction(uid, component.ToggleGhostsAction, null);
+            //_actions.AddAction(uid, component.ToggleGhostsAction, null);
         }
 
         private void OnToggleLighting(EntityUid uid, GhostComponent component, ToggleLightingActionEvent args)

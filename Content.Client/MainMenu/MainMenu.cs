@@ -4,13 +4,16 @@ using System.Threading;
 using Content.Client.MainMenu.UI;
 using Content.Client.Maps;
 using Content.Client.UserInterface.Systems.EscapeMenu;
+using Content.Shared.CCVar;
 using Robust.Client;
+using Robust.Client.Configuration;
 using Robust.Client.Console;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared;
 using Robust.Shared.Configuration;
+using Robust.Shared.ContentPack;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -31,8 +34,9 @@ namespace Content.Client.MainMenu
         [Dependency] private readonly IGameController _controllerProxy = default!;
         [Dependency] private readonly IResourceCache _resourceCache = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
+        [Dependency] private readonly IClientNetConfigurationManager _configManager = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
+        [Dependency] private readonly IModLoaderInternal _modLoader = default!;
         private MainMenuControl _mainMenuControl = default!;
         private bool _isConnecting;
         private static readonly string UserName = "Elfen";
@@ -50,6 +54,8 @@ namespace Content.Client.MainMenu
             _mainMenuControl.QuitButton.OnPressed += QuitButtonPressed;
             _mainMenuControl.OptionsButton.OnPressed += OptionsButtonPressed;
             _mainMenuControl.DirectConnectButton.OnPressed += DirectConnectButtonPressed;
+            _mainMenuControl.EditButton.OnPressed += EditButtonPressed;
+            _mainMenuControl.DeleteButton.OnPressed += DeleteButtonPressed;
             //_mainMenuControl.AddressBox.OnTextEntered += AddressBoxEntered;
             //_mainMenuControl.ChangelogButton.OnPressed += ChangelogButtonPressed;
             Test();
@@ -64,7 +70,7 @@ namespace Content.Client.MainMenu
                 .ToArray();
             foreach (var gameMapPrototype in result)
             {
-                _mainMenuControl.MapList.AddItem($"{gameMapPrototype.ID} - {gameMapPrototype.MapName} ({gameMapPrototype.MapPath})");
+                _mainMenuControl.MapList.AddItem($"{gameMapPrototype.ID} - {gameMapPrototype.MapName}|{gameMapPrototype.MapPath}");
             }
         }
         /// <inheritdoc />
@@ -76,10 +82,24 @@ namespace Content.Client.MainMenu
             _mainMenuControl.Dispose();
         }
 
-        private void ChangelogButtonPressed(BaseButton.ButtonEventArgs args)
+        private void EditButtonPressed(BaseButton.ButtonEventArgs args)
         {
-            _userInterfaceManager.GetUIController<ChangelogUIController>().ToggleWindow();
+            var selected = _mainMenuControl.MapList.GetSelected().ToList().ElementAt(0);
+            if (selected != null)
+            {
+                var split = selected.Text.Split("|") ?? new[] { "new" };
+                _configManager.SetCVar(CVars.ActiveWorkingMap, split[1]);
+                //_configurationManager.SetCVar(CCVars.GameMap, split[0]);
+                TryConnect(Address);
+
+            }
         }
+
+        private void DeleteButtonPressed(BaseButton.ButtonEventArgs args)
+        {
+            var selected = _mainMenuControl.MapList.GetSelected();
+        }
+ 
 
         private void OptionsButtonPressed(BaseButton.ButtonEventArgs args)
         {

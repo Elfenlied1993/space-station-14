@@ -39,29 +39,29 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls
 
         public void Populate()
         {
-            ButtonContainer.DisposeAllChildren();
-            AddButtons();
+            //ButtonContainer.DisposeAllChildren();
+            //AddButtons();
         }
 
-        private void AddButtons()
-        {
-            foreach (var (name, warpTarget) in _warps)
-            {
-                var currentButtonRef = new Button
-                {
-                    Text = name,
-                    TextAlign = Label.AlignMode.Right,
-                    HorizontalAlignment = HAlignment.Center,
-                    VerticalAlignment = VAlignment.Center,
-                    SizeFlagsStretchRatio = 1,
-                    MinSize = (340, 20),
-                    ClipText = true,
-                };
+        //private void AddButtons()
+        //{
+        //    foreach (var (name, warpTarget) in _warps)
+        //    {
+        //        var currentButtonRef = new Button
+        //        {
+        //            Text = name,
+        //            TextAlign = Label.AlignMode.Right,
+        //            HorizontalAlignment = HAlignment.Center,
+        //            VerticalAlignment = VAlignment.Center,
+        //            SizeFlagsStretchRatio = 1,
+        //            MinSize = (340, 20),
+        //            ClipText = true,
+        //        };
 
-                currentButtonRef.OnPressed += _ => WarpClicked?.Invoke(warpTarget);
+        //        currentButtonRef.OnPressed += _ => WarpClicked?.Invoke(warpTarget);
 
-                ButtonContainer.AddChild(currentButtonRef);
-            }
-        }
+        //        ButtonContainer.AddChild(currentButtonRef);
+        //    }
+        //}
     }
 }

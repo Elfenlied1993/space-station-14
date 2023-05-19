@@ -168,6 +168,8 @@ public sealed class GameMapManager : IGameMapManager
 
     private bool TryLookupMap(string gameMap, [NotNullWhen(true)] out GameMapPrototype? map)
     {
+        if (gameMap == "Dev")
+            gameMap = "Empty";
         return _prototypeManager.TryIndex(gameMap, out map);
     }
 
