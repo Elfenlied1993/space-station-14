@@ -62,9 +62,6 @@ namespace Content.Server.Administration.Commands
             EntitySystem.Get<SolutionContainerSystem>().SetThermalEnergy(uid, solution, quantity);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }

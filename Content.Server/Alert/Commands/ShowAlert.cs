@@ -55,9 +55,5 @@ namespace Content.Server.Alert.Commands
             alertsSystem.ShowAlert(attachedEntity, alert.AlertType, severity1, null);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

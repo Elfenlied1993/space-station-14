@@ -29,9 +29,5 @@ public sealed class ShowFluidsCommand : IConsoleCommand
             ? "Enabled the puddle debug overlay."
             : "Disabled the puddle debug overlay.");
     }
-
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+    
 }

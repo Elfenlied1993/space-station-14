@@ -33,9 +33,6 @@ namespace Content.Server.Administration.Commands
             shell.WriteLine($"Deleted all entities with id {id}. Occurrences: {i}");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

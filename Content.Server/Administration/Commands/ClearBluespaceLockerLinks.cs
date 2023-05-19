@@ -31,8 +31,5 @@ public sealed class ClearBluespaceLockerLinks : IConsoleCommand
             entityManager.RemoveComponent(entityUid, originComponent);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

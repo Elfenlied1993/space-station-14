@@ -47,8 +47,5 @@ public sealed class VariantizeCommand : IConsoleCommand
         }
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

@@ -23,8 +23,5 @@ public sealed class ThrowScoreboardCommand : IConsoleCommand
         EntitySystem.Get<GameTicker>().ShowRoundEndScoreboard();
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

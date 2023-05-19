@@ -31,9 +31,6 @@ namespace Content.Server.Administration.Commands
             adminMgr.PromoteHost(targetPlayer);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }

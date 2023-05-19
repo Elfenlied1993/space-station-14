@@ -164,8 +164,5 @@ public sealed class ClearAllNetworkLinkOverlays : IConsoleCommand
         IoCManager.Resolve<IEntityManager>().System<NetworkConfiguratorSystem>().ClearAllOverlays();
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+  
 }

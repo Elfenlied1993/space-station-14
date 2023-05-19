@@ -31,8 +31,4 @@ public sealed class GridDraggingCommand : IConsoleCommand
             shell.WriteLine("Grid dragging toggled off");
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

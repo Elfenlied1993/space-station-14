@@ -62,10 +62,6 @@ public sealed class StatValuesCommand : IConsoleCommand
         eui.SendMessage(message);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {

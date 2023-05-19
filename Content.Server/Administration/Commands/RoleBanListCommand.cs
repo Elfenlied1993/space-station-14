@@ -91,10 +91,7 @@ public sealed class RoleBanListCommand : IConsoleCommand
         shell.WriteLine(bansString.ToString());
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {

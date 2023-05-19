@@ -44,9 +44,6 @@ namespace Content.Server.Administration.Commands
             shell.WriteLine(Loc.GetString("delete-entities-with-component-command-deleted-components",("count", count)));
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

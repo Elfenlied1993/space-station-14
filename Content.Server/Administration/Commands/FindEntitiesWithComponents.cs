@@ -65,9 +65,6 @@ namespace Content.Server.Administration.Commands
             shell.WriteLine($"{entityIds.Count} entities found:\n{string.Join("\n", entityIds)}");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

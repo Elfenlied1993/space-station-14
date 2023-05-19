@@ -64,9 +64,5 @@ namespace Content.Server.Body.Commands
             shell.WriteLine($"No mechanism was found with name {mechanismName}.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

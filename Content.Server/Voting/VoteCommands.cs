@@ -46,11 +46,7 @@ namespace Content.Server.Voting
             mgr.CreateStandardVote((IPlayerSession?) shell.Player, type);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
-
+    
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             if (args.Length == 1)
@@ -123,10 +119,6 @@ namespace Content.Server.Voting
             };
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
@@ -200,10 +192,7 @@ namespace Content.Server.Voting
             vote.CastVote((IPlayerSession) shell.Player!, optionN);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 
     [AnyCommand]
@@ -223,10 +212,7 @@ namespace Content.Server.Voting
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 
     [AdminCommand(AdminFlags.Admin)]
@@ -261,11 +247,7 @@ namespace Content.Server.Voting
             vote.Cancel();
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
-
+    
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             var mgr = IoCManager.Resolve<IVoteManager>();

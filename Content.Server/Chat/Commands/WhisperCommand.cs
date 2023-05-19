@@ -41,9 +41,5 @@ namespace Content.Server.Chat.Commands
                 .TrySendInGameICMessage(playerEntity, message, InGameICChatType.Whisper, ChatTransmitRange.Normal, shell, player);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

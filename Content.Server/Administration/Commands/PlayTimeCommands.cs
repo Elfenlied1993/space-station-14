@@ -45,10 +45,7 @@ public sealed class PlayTimeAddOverallCommand : IConsoleCommand
             ("time", overall)));
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
@@ -105,10 +102,7 @@ public sealed class PlayTimeAddRoleCommand : IConsoleCommand
             ("time", time)));
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
@@ -165,10 +159,7 @@ public sealed class PlayTimeGetOverallCommand : IConsoleCommand
             ("time", value)));
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+ 
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
@@ -239,10 +230,6 @@ public sealed class PlayTimeGetRoleCommand : IConsoleCommand
         }
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
@@ -296,10 +283,7 @@ public sealed class PlayTimeSaveCommand : IConsoleCommand
         shell.WriteLine(Loc.GetString("cmd-playtime_save-succeed", ("username", name)));
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+  
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
@@ -348,10 +332,7 @@ public sealed class PlayTimeFlushCommand : IConsoleCommand
         _playTimeTracking.FlushTracker(pSession);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {

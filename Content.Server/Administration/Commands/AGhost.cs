@@ -68,9 +68,6 @@ namespace Content.Server.Administration.Commands
             EntitySystem.Get<SharedGhostSystem>().SetCanReturnToBody(comp, canReturn);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

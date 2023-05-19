@@ -121,9 +121,5 @@ namespace Content.Server.Body.Commands
             shell.WriteLine($"Attached part {entityManager.ToPrettyString(partUid)} to {entityManager.ToPrettyString(bodyId)}");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

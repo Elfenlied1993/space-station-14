@@ -41,10 +41,7 @@ namespace Content.Server.GameTicking.Commands
             ticker.UpdateInfoText();
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+    
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {

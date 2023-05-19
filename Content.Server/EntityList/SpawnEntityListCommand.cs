@@ -53,10 +53,6 @@ namespace Content.Server.EntityList
 
             shell.WriteLine($"Spawned {i} entities.");
         }
-
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

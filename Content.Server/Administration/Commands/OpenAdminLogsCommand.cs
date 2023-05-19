@@ -26,8 +26,5 @@ public sealed class OpenAdminLogsCommand : IConsoleCommand
         eui.OpenEui(ui, player);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

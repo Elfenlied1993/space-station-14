@@ -37,8 +37,5 @@ public sealed class ListStationJobsCommand : IConsoleCommand
         }
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

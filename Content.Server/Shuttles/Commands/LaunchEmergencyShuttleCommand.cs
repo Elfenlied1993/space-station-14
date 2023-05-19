@@ -22,8 +22,4 @@ public sealed class LaunchEmergencyShuttleCommand : IConsoleCommand
         system.EarlyLaunch();
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

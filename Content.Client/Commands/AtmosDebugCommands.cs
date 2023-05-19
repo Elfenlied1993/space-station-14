@@ -40,10 +40,7 @@ namespace Content.Client.Commands
             sys.CfgScale = xEnd - xStart;
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 
     [UsedImplicitly]
@@ -101,10 +98,7 @@ namespace Content.Client.Commands
             sys.CfgScale = xScale;
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
     [UsedImplicitly]
@@ -129,9 +123,6 @@ namespace Content.Client.Commands
             sys.CfgCBM = xFlag;
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }

@@ -58,9 +58,6 @@ namespace Content.Server.Administration.Commands
             shell.WriteLine($"Pardoned ban with id {banId}");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

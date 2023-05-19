@@ -25,10 +25,6 @@ namespace Content.Server.GameTicking.Commands
             EntitySystem.Get<RoundEndSystem>().EndRound();
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     [AdminCommand(AdminFlags.Round)]
@@ -43,9 +39,5 @@ namespace Content.Server.GameTicking.Commands
             EntitySystem.Get<GameTicker>().RestartRound();
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

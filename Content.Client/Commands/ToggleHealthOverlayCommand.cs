@@ -18,9 +18,6 @@ namespace Content.Client.Commands
             shell.WriteLine($"Health overlay system {(system.Enabled ? "enabled" : "disabled")}.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }

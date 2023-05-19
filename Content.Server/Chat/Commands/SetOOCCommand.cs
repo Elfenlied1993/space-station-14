@@ -39,9 +39,5 @@ public sealed class SetOOCCommand : IConsoleCommand
 
         shell.WriteLine(Loc.GetString(ooc ? "set-ooc-command-ooc-enabled" : "set-ooc-command-ooc-disabled"));
     }
-
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+    
 }

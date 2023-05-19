@@ -43,9 +43,6 @@ namespace Content.Server.Administration.Commands
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

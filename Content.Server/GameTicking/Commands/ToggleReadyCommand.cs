@@ -28,9 +28,5 @@ namespace Content.Server.GameTicking.Commands
             ticker.ToggleReady(player, bool.Parse(args[0]));
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

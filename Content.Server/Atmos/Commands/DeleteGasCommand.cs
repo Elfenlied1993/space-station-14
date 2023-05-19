@@ -166,10 +166,6 @@ namespace Content.Server.Atmos.Commands
             shell.WriteLine($"Removed {moles} moles of gas {gas} from {tiles} tiles.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }

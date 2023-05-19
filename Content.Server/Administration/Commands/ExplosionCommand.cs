@@ -32,10 +32,7 @@ public sealed class OpenExplosionEui : IConsoleCommand
         eui.OpenEui(ui, player);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+ 
 }
 
 [AdminCommand(AdminFlags.Fun)] // for the admin. Not so much for anyone else.
@@ -139,8 +136,5 @@ public sealed class ExplosionCommand : IConsoleCommand
         sysMan.GetEntitySystem<ExplosionSystem>().QueueExplosion(coords, type.ID, intensity, slope, maxIntensity);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+  
 }

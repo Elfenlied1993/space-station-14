@@ -46,9 +46,5 @@ namespace Content.Server.Roles
             mind.RemoveRole(role);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

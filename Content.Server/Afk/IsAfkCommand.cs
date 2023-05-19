@@ -33,10 +33,6 @@ namespace Content.Server.Afk
             shell.WriteLine(afkManager.IsAfk(player) ? "They are indeed AFK" : "They are not AFK");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {

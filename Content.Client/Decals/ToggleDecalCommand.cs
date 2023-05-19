@@ -13,8 +13,5 @@ public sealed class ToggleDecalCommand : IConsoleCommand
         EntitySystem.Get<DecalSystem>().ToggleOverlay();
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+  
 }

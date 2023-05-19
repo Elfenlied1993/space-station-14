@@ -103,8 +103,4 @@ public sealed class RadiationViewCommand : IConsoleCommand
         entityManager.System<RadiationSystem>().ToggleDebugView(session);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

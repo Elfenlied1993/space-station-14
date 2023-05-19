@@ -43,9 +43,5 @@ namespace Content.Server.Power
             // Don't acknowledge b/c people WILL forall this
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

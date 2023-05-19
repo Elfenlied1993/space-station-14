@@ -40,8 +40,4 @@ public sealed class SetLOOCCommand : IConsoleCommand
         shell.WriteLine(Loc.GetString(looc ? "set-looc-command-looc-enabled" : "set-looc-command-looc-disabled"));
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

@@ -18,10 +18,6 @@ namespace Content.Server.Traitor.Uplink.Commands
         public string Help => Loc.GetString("add-uplink-command-help");
 
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
 
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

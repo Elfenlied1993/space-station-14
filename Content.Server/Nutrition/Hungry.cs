@@ -42,9 +42,5 @@ namespace Content.Server.Nutrition
             _entities.System<HungerSystem>().SetHunger(playerEntity, hungryThreshold, hunger);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

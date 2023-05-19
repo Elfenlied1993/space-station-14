@@ -20,10 +20,7 @@ namespace Content.Client.Commands
             IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<MarkerSystem>().MarkersVisible ^= true;
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 
     internal sealed class ShowSubFloor : IConsoleCommand
@@ -38,10 +35,7 @@ namespace Content.Client.Commands
             IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<SubFloorHideSystem>().ShowAll ^= true;
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
     internal sealed class ShowSubFloorForever : IConsoleCommand
@@ -64,10 +58,7 @@ namespace Content.Client.Commands
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
     internal sealed class NotifyCommand : IConsoleCommand
@@ -83,9 +74,6 @@ namespace Content.Client.Commands
             IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<PopupSystem>().PopupCursor(message);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

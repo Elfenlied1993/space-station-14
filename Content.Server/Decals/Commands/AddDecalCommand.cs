@@ -110,9 +110,5 @@ namespace Content.Server.Decals.Commands
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -64,10 +64,7 @@ public sealed class LoadActionsCommand : IConsoleCommand
         }
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+ 
 }
 
 [AnyCommand]
@@ -91,8 +88,5 @@ public sealed class LoadMappingActionsCommand : IConsoleCommand
         }
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+    
 }

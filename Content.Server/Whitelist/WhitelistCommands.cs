@@ -46,10 +46,7 @@ public sealed class AddWhitelistCommand : IConsoleCommand
 
  
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+   
 }
 
 [AdminCommand(AdminFlags.Ban)]
@@ -87,10 +84,6 @@ public sealed class RemoveWhitelistCommand : IConsoleCommand
         shell.WriteError(Loc.GetString("command-whitelistremove-not-found", ("username", args[0])));
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }
 
 [AdminCommand(AdminFlags.Ban)]
@@ -125,9 +118,5 @@ public sealed class KickNonWhitelistedCommand : IConsoleCommand
         }
 
     }
-
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+    
 }

@@ -22,9 +22,5 @@ namespace Content.Server.Power.Commands
             shell.WriteLine($"batteries: {stats.CountBatteries}");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

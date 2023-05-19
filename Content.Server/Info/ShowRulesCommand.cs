@@ -64,8 +64,4 @@ public sealed class ShowRulesCommand : IConsoleCommand
         netManager.ServerSendMessage(message, player.ConnectedClient);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

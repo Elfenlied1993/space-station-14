@@ -71,9 +71,5 @@ namespace Content.Server.Administration.Commands
             mind.TransferTo(eUid);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

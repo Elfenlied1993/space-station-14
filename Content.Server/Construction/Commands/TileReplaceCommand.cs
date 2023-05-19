@@ -81,10 +81,6 @@ sealed class TileReplaceCommand : IConsoleCommand
 
         shell.WriteLine($"Changed {changed} tiles.");
     }
-
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+    
 }
 

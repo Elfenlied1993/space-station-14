@@ -39,10 +39,6 @@ namespace Content.Server.Nuke.Commands
             _entityManager.System<NukeCodePaperSystem>().SendNukeCodes(uid);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {

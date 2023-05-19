@@ -18,9 +18,6 @@ namespace Content.Client.Commands
             new CreditsWindow().Open();
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }

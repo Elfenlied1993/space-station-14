@@ -36,9 +36,6 @@ namespace Content.Server.Administration.Commands
             shell.WriteLine($"Deleted entity with id {id}.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

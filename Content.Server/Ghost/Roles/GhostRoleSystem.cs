@@ -383,9 +383,5 @@ namespace Content.Server.Ghost.Roles
                 shell.WriteLine("You can only open the ghost roles UI on a client.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

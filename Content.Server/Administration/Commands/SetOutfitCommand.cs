@@ -73,10 +73,7 @@ namespace Content.Server.Administration.Commands
                 shell.WriteLine(Loc.GetString("set-outfit-command-invalid-outfit-id-error"));
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public static bool SetOutfit(EntityUid target, string gear, IEntityManager entityManager, Action<EntityUid, EntityUid>? onEquipped = null)
         {

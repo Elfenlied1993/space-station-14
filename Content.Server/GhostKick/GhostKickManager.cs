@@ -74,8 +74,4 @@ public sealed class GhostKickCommand : IConsoleCommand
         ghostKick.DoDisconnect(player.ConnectedClient, reason);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

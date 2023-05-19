@@ -38,8 +38,5 @@ public sealed class MeleeSpreadCommand : IConsoleCommand
             sysManager.GetEntitySystem<SharedCombatModeSystem>()));
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+  
 }

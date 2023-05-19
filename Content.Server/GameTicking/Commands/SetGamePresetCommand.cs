@@ -37,10 +37,6 @@ namespace Content.Server.GameTicking.Commands
             shell.WriteLine(Loc.GetString("set-game-preset-preset-set", ("preset", preset.ID)));
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {

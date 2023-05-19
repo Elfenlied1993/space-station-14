@@ -67,9 +67,5 @@ namespace Content.Server.Damage.Commands
                 : $"Disabled godmode for entity {name} with id {entity}");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

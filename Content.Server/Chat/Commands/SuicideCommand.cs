@@ -50,9 +50,5 @@ namespace Content.Server.Chat.Commands
             shell.WriteLine("You can't ghost right now.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

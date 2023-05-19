@@ -1,4 +1,4 @@
-﻿using Content.Client.Administration.Managers;
+using Content.Client.Administration.Managers;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Robust.Shared.GameObjects;
@@ -25,10 +25,7 @@ namespace Content.Client.NodeContainer
             sys.SetVisEnabled(!sys.VisEnabled);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+   
     }
 
     public sealed class NodeVisFilterCommand : IConsoleCommand
@@ -58,9 +55,6 @@ namespace Content.Client.NodeContainer
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

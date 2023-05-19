@@ -55,9 +55,5 @@ namespace Content.Server.Body.Commands
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

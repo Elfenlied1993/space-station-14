@@ -56,10 +56,7 @@ namespace Content.Server.Administration.Commands
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+     
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
@@ -110,26 +107,6 @@ namespace Content.Server.Administration.Commands
             }
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
-            var entityManager = IoCManager.Resolve<IEntityManager>();
-            var gameTicker = entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
-
-            if (args.Length != 0)
-            {
-                shell.WriteError(Loc.GetString("shell-wrong-arguments-number"));
-                return new List<string>();
-            }
-
-            var result = new List<string>();
-            foreach (var prototype in prototypeManager.EnumeratePrototypes<GameMapPrototype>())
-            {
-                result.Add($"{prototype.ID} - {prototype.MapName}");
-                //shell.WriteLine($"{prototype.ID} - {prototype.MapName}");
-            }
-
-            return result;
-        }
+     
     }
 }

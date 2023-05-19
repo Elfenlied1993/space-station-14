@@ -67,9 +67,5 @@ namespace Content.Server.Ghost.Roles
             shell.WriteLine($"Made entity {metaData.EntityName} a ghost role.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

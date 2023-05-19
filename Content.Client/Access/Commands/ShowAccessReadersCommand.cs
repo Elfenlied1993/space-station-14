@@ -31,8 +31,5 @@ public sealed class ShowAccessReadersCommand : IConsoleCommand
         shell.WriteLine($"Set access reader debug overlay to true");
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+  
 }

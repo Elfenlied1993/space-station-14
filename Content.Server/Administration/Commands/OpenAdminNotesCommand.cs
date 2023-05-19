@@ -49,8 +49,5 @@ public sealed class OpenAdminNotesCommand : IConsoleCommand
         await IoCManager.Resolve<IAdminNotesManager>().OpenEui(player, notedPlayer);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
+  
 }

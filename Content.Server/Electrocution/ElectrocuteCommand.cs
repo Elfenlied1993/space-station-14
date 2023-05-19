@@ -51,9 +51,5 @@ namespace Content.Server.Electrocution
                 .TryDoElectrocution(uid, null, damage, TimeSpan.FromSeconds(seconds), refresh: true, ignoreInsulation: true);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

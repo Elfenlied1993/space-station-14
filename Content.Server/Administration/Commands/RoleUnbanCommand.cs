@@ -58,10 +58,6 @@ public sealed class RoleUnbanCommand : IConsoleCommand
         shell.WriteLine($"Pardoned ban with id {banId}");
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {

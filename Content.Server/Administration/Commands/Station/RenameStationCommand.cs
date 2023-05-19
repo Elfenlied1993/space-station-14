@@ -32,8 +32,4 @@ public sealed class RenameStationCommand : IConsoleCommand
         stationSystem.RenameStation(new EntityUid(station), args[1]);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

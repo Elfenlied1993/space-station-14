@@ -43,9 +43,5 @@ namespace Content.Server.NPC.Commands
             shell.WriteLine("AI component added.");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -30,9 +30,6 @@ namespace Content.Client.Commands
             IoCManager.Resolve<IClientConsoleHost>().ExecuteCommand("showcontainedcontext");
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }

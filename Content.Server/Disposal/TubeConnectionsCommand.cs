@@ -54,9 +54,5 @@ namespace Content.Server.Disposal
             _entities.System<DisposalTubeSystem>().PopupDirections(id, tube, player.AttachedEntity.Value);
         }
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

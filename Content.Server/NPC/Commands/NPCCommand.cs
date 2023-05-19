@@ -24,8 +24,4 @@ public sealed class NPCCommand : IConsoleCommand
         euiManager.OpenEui(new NPCEui(), playerSession);
     }
 
-    public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-    {
-        throw new NotImplementedException();
-    }
 }

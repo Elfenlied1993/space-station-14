@@ -16,10 +16,6 @@ namespace Content.Server.AlertLevel.Commands
         public string Description => Loc.GetString("cmd-setalertlevel-desc");
         public string Help => Loc.GetString("cmd-setalertlevel-help");
 
-        public List<string> ExecuteResult(IConsoleShell shell, string argStr, string[] args)
-        {
-            throw new NotImplementedException();
-        }
 
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
