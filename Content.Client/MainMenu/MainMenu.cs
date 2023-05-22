@@ -36,7 +36,6 @@ namespace Content.Client.MainMenu
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
         [Dependency] private readonly IClientNetConfigurationManager _configManager = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly IModLoaderInternal _modLoader = default!;
         private MainMenuControl _mainMenuControl = default!;
         private bool _isConnecting;
         private static readonly string UserName = "Elfen";

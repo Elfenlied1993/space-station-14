@@ -130,12 +130,6 @@ namespace Content.Server.Entry
             }
         }
 
-        public override void ReloadMap()
-        {
-            base.ReloadMap();
-            IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<GameTicker>().RestartRound();
-        }
-
         public override void PostInit()
         {
             base.PostInit();
