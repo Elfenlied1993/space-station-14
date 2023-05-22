@@ -1,4 +1,4 @@
-﻿using Content.Client.Administration.Managers;
+using Content.Client.Administration.Managers;
 using Content.Client.Gameplay;
 using Content.Client.Markers;
 using Content.Client.Sandbox;
@@ -91,8 +91,8 @@ public sealed class SandboxUIController : UIController, IOnStateChanged<Gameplay
         if(_window is { Disposed: false })
             return;
         _window = UIManager.CreateWindow<SandboxWindow>();
-        _window.OnOpen += () => { SandboxButton!.Pressed = true; };
-        _window.OnClose += () => { SandboxButton!.Pressed = false; };
+        //_window.OnOpen += () => { SandboxButton!.Pressed = true; };
+        //_window.OnClose += () => { SandboxButton!.Pressed = false; };
         _window.ToggleLightButton.Pressed = !_light.Enabled;
         _window.ToggleFovButton.Pressed = !_eye.CurrentEye.DrawFov;
         _window.ToggleShadowsButton.Pressed = !_light.DrawShadows;

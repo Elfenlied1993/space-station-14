@@ -1,6 +1,7 @@
 ### EscapeMenu.xaml
 
 ui-escape-title = Игровое меню
+ui-escape-save = Сохранить
 ui-escape-options = Настройки
 ui-escape-rules = Правила
 ui-escape-guidebook = Руководство

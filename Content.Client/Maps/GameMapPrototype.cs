@@ -32,6 +32,13 @@ public sealed partial class GameMapPrototype : IPrototype
     [DataField("mapPath", required: true)]
     public ResPath MapPath { get; } = default!;
 
+    [DataField("stations", required: true)]
+    private Dictionary<string, StationConfig> _stations = new();
+
+    /// <summary>
+    /// The stations this map contains. The names should match with the BecomesStation components.
+    /// </summary>
+    public IReadOnlyDictionary<string, StationConfig> Stations => _stations;
 
 
 }

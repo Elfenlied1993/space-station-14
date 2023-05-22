@@ -9,6 +9,23 @@ ui-options-apply = Применить
 ui-options-reset-all = Сбросить всё
 ui-options-default = По-умолчанию
 
+## Save menu
+
+ui-save-title = Сохранение карты
+ui-save-general = Общие:
+ui-save-id = ID
+ui-save-map-name = Название карты
+ui-save-map-path = Путь к карте
+ui-save-min-players = Минимальное количество игроков
+ui-save-max-players = Максимальное количество игроков
+ui-save-map-name-template = Образец названия карты 
+ui-save-emergency-path = Путь к экстренному шаттлу
+ui-save-jobs-overflow = Должности без лимита
+ui-save-title = Сохранение карты
+ui-save-title = Сохранение карты
+ui-save-title = Сохранение карты
+
+
 ## Audio menu
 
 ui-options-master-volume = Основная громкость:

@@ -23,7 +23,7 @@ namespace Content.Client.Ghost
 
         public int AvailableGhostRoleCount { get; private set; }
 
-        private bool _ghostVisibility = true;
+        private bool _ghostVisibility = false;
 
         private bool GhostVisibility
         {
@@ -81,7 +81,6 @@ namespace Content.Client.Ghost
             {
                 sprite.Visible = false;
             }
-
             _actions.AddAction(uid, component.ToggleLightingAction, null);
             _actions.AddAction(uid, component.ToggleFoVAction, null);
             //_actions.AddAction(uid, component.ToggleGhostsAction, null);
@@ -140,8 +139,8 @@ namespace Content.Client.Ghost
         {
             if (uid != _playerManager.LocalPlayer?.ControlledEntity)
                 return;
-
-            GhostVisibility = true;
+            _console.ExecuteCommand("loadmapacts");
+            GhostVisibility = false;
             component.IsAttached = true;
             PlayerAttached?.Invoke(component);
         }
