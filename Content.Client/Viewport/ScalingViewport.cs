@@ -129,10 +129,10 @@ namespace Content.Client.Viewport
                 switch (args.Delta.Y)
                 {
                     case -1f:
-                        currentZoom -= 0.2;
+                        currentZoom += 0.2;
                         break;
                     case 1f:
-                        currentZoom += 0.2;
+                        currentZoom -= 0.2;
                         break;
                 }
                 _consoleHost.ExecuteCommand($"zoom {currentZoom.ToString(CultureInfo.InvariantCulture).Replace('.',',')}");
