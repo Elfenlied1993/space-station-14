@@ -1,9 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using Content.Client.Movement.Systems;
+using Content.Shared.Movement.Components;
+using Robust.Client.Configuration;
+using Robust.Client.Console;
 using Robust.Client.Graphics;
 using Robust.Client.Input;
+using Robust.Client.Player;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.CustomControls;
+using Robust.Shared;
+using Robust.Shared.Configuration;
 using Robust.Shared.IoC;
 using Robust.Shared.Map;
 using Robust.Shared.Maths;
@@ -21,7 +29,11 @@ namespace Content.Client.Viewport
     {
         [Dependency] private readonly IClyde _clyde = default!;
         [Dependency] private readonly IInputManager _inputManager = default!;
-
+        [Dependency] private readonly IEntityManager _entManager = default!;
+        [Dependency] private readonly IEyeManager _eyeMan = default!;
+        [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
+        [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+        [Dependency] private readonly IClientNetConfigurationManager _configManager = default!;
         // Internal viewport creation is deferred.
         private IClydeViewport? _viewport;
         private IEye? _eye;
@@ -107,6 +119,25 @@ namespace Content.Client.Viewport
         {
             IoCManager.InjectDependencies(this);
             RectClipContent = true;
+        }
+
+        protected override void MouseWheel(GUIMouseWheelEventArgs args)
+        {
+            if (_inputManager.IsKeyDown(Keyboard.Key.Control))
+            {
+                var currentZoom = _configManager.GetCVar(CVars.CurrentZoom);
+                switch (args.Delta.Y)
+                {
+                    case -1f:
+                        currentZoom -= 0.2;
+                        break;
+                    case 1f:
+                        currentZoom += 0.2;
+                        break;
+                }
+                _consoleHost.ExecuteCommand($"zoom {currentZoom.ToString(CultureInfo.InvariantCulture).Replace('.',',')}");
+                _configManager.SetCVar(CVars.CurrentZoom,currentZoom);
+            }
         }
 
         protected override void KeyBindDown(GUIBoundKeyEventArgs args)
