@@ -5,6 +5,7 @@ using Content.Client.MainMenu.UI;
 using Content.Client.Maps;
 using Content.Client.UserInterface.Systems.EscapeMenu;
 using Content.Shared.CCVar;
+using Content.Shared.Maps;
 using Robust.Client;
 using Robust.Client.Configuration;
 using Robust.Client.Console;
@@ -65,6 +66,7 @@ namespace Content.Client.MainMenu
 
         private async void Test()
         {
+            //_prototypeManager.RegisterKind(typeof(GameMapPrototype));
             var result = _prototypeManager.EnumeratePrototypes<GameMapPrototype>()
                 .ToArray();
             foreach (var gameMapPrototype in result)

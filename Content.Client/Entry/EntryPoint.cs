@@ -15,6 +15,7 @@ using Content.Client.Input;
 using Content.Client.IoC;
 using Content.Client.Launcher;
 using Content.Client.MainMenu;
+using Content.Client.Maps;
 using Content.Client.Parallax.Managers;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Client.Preferences;
@@ -104,6 +105,7 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("barSign");
             _prototypeManager.RegisterIgnore("objective");
             _prototypeManager.RegisterIgnore("holiday");
+            //_prototypeManager.RegisterKind(typeof(GameMapPrototype));
             _prototypeManager.RegisterIgnore("aiFaction");
             _prototypeManager.RegisterIgnore("htnCompound");
             _prototypeManager.RegisterIgnore("htnPrimitive");

@@ -1,0 +1,23 @@
+using Content.Client.Maps.NameGenerators;
+
+namespace Content.Client.Maps.Components;
+
+/// <summary>
+/// This is used for setting up a station's name.
+/// </summary>
+[RegisterComponent]
+public sealed class StationNameSetupComponent : Component
+{
+    /// <summary>
+    /// The name template to use for the station.
+    /// If there's a name generator this should follow it's required format.
+    /// </summary>
+    [DataField("mapNameTemplate", required: true)]
+    public string StationNameTemplate { get; } = default!;
+
+    /// <summary>
+    /// Name generator to use for the station, if any.
+    /// </summary>
+    [DataField("nameGenerator")]
+    public StationNameGenerator? NameGenerator { get; }
+}

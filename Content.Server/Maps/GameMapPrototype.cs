@@ -18,7 +18,7 @@ namespace Content.Server.Maps;
 public sealed partial class GameMapPrototype : IPrototype
 {
     /// <inheritdoc/>
-    [IdDataField]
+    [IdDataField] 
     public string ID { get; } = default!;
 
     /// <summary>
