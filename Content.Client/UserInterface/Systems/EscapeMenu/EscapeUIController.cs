@@ -7,6 +7,7 @@ using JetBrains.Annotations;
 using Robust.Client.Console;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
+using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
@@ -66,7 +67,7 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
         _escapeWindow.SaveButton.OnPressed += _ =>
         {
             CloseEscapeWindow();
-            _save.OpenWindow();
+            _console.ExecuteCommand($"savemap 220220 {_cfg.GetCVar(CVars.ActiveWorkingMap)}");
         };
         _escapeWindow.DisconnectButton.OnPressed += _ =>
         {

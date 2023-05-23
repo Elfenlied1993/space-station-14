@@ -12,7 +12,7 @@
             <BoxContainer Orientation="Horizontal"
                           SeparationOverride="4">
                 <Button Access="Public" Text ="{Loc 'main-menu-edit-button'}" Name="EditButton"  TextAlign="Center" StyleIdentifier="mainMenu"/>
-                <Button Access="Public" Text ="{Loc 'main-menu-delete-button'}" Name="DeleteButton"  TextAlign="Center" StyleIdentifier="mainMenu"/>
+                <!--<Button Access="Public" Text ="{Loc 'main-menu-delete-button'}" Name="DeleteButton"  TextAlign="Center" StyleIdentifier="mainMenu"/>-->
             </BoxContainer>
         </BoxContainer>
         <BoxContainer Name="VBox"

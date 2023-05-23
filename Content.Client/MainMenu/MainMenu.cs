@@ -55,7 +55,7 @@ namespace Content.Client.MainMenu
             _mainMenuControl.OptionsButton.OnPressed += OptionsButtonPressed;
             _mainMenuControl.DirectConnectButton.OnPressed += DirectConnectButtonPressed;
             _mainMenuControl.EditButton.OnPressed += EditButtonPressed;
-            _mainMenuControl.DeleteButton.OnPressed += DeleteButtonPressed;
+            //_mainMenuControl.DeleteButton.OnPressed += DeleteButtonPressed;
             //_mainMenuControl.AddressBox.OnTextEntered += AddressBoxEntered;
             //_mainMenuControl.ChangelogButton.OnPressed += ChangelogButtonPressed;
             Test();
@@ -85,10 +85,10 @@ namespace Content.Client.MainMenu
 
         private void EditButtonPressed(BaseButton.ButtonEventArgs args)
         {
-            var selected = _mainMenuControl.MapList.GetSelected().ToList().ElementAt(0);
-            if (selected != null)
+            var selected = _mainMenuControl?.MapList.GetSelected().ToList();
+            if (selected?.Count != 0)
             {
-                var split = selected.Text.Split("|") ?? new[] { "new" };
+                var split = selected?.ElementAt(0).Text.Split("|") ?? new[] { "new" };
                 _configManager.SetCVar(CVars.ActiveWorkingMap, split[1]);
                 //_configurationManager.SetCVar(CCVars.GameMap, split[0]);
                 TryConnect(Address);
@@ -98,7 +98,7 @@ namespace Content.Client.MainMenu
 
         private void DeleteButtonPressed(BaseButton.ButtonEventArgs args)
         {
-            var selected = _mainMenuControl.MapList.GetSelected();
+            //var selected = _mainMenuControl.MapList.GetSelected();
         }
  
 
@@ -123,6 +123,7 @@ namespace Content.Client.MainMenu
             {
                 return;
             }
+            _configManager.SetCVar(CVars.ActiveWorkingMap, string.Empty);
 
             TryConnect(args.Text);
         }

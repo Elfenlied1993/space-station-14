@@ -27,7 +27,7 @@ namespace Content.Client.MainMenu.UI
             //LayoutContainer.SetGrowHorizontal(MapList, LayoutContainer.GrowDirection.Begin);
 
             LayoutContainer.SetMarginTop(EditButton, 30);
-            LayoutContainer.SetMarginTop(DeleteButton, 30);
+            //LayoutContainer.SetMarginTop(DeleteButton, 30);
 
           
             LayoutContainer.SetAnchorPreset(VBox, LayoutContainer.LayoutPreset.TopRight);

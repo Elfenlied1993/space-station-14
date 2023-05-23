@@ -20,10 +20,7 @@ ui-save-min-players = Минимальное количество игроков
 ui-save-max-players = Максимальное количество игроков
 ui-save-map-name-template = Образец названия карты 
 ui-save-emergency-path = Путь к экстренному шаттлу
-ui-save-jobs-overflow = Должности без лимита
-ui-save-title = Сохранение карты
-ui-save-title = Сохранение карты
-ui-save-title = Сохранение карты
+ui-save-jobs= Должности:
 
 
 ## Audio menu

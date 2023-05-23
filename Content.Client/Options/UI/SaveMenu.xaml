@@ -7,68 +7,69 @@
     <BoxContainer Name="SaveMap" Access="Public">
         <BoxContainer  Orientation="Vertical">
             <BoxContainer Orientation="Vertical" Margin="8 8 8 8" VerticalExpand="True">
-                <Label Text="{Loc 'ui-options-volume-label'}"
+                <Label Text="{Loc 'ui-save-general'}"
                    FontColorOverride="{x:Static s:StyleNano.NanoGold}"
                    StyleClasses="LabelKeyText"/>
                 <BoxContainer Orientation="Vertical" Margin="0 3 0 0">
                     <BoxContainer Orientation="Horizontal" Margin="5 0 0 0">
-                        <Label Text="{Loc 'ui-options-master-volume'}" HorizontalExpand="True" />
+                        <Label Text="{Loc 'ui-save-id'}" HorizontalExpand="True" />
                         <Control MinSize="8 0" />
-                        <Slider Name="MasterVolumeSlider"
-                            MinValue="0"
-                            MaxValue="100"
-                            HorizontalExpand="True"
-                            MinSize="80 0"
-                            Rounded="True" />
-                        <Control MinSize="8 0" />
-                        <Label Name="MasterVolumeLabel" MinSize="48 0" Align="Right" />
-                        <Control MinSize="4 0"/>
+                        <LineEdit Name="Id"
+                        Access="Public"
+                        Text=""
+                        PlaceHolder="E.g. Box"
+                        HorizontalExpand="True" />
+
                     </BoxContainer>
                     <Control MinSize="0 8" />
                     <BoxContainer Orientation="Horizontal" Margin="5 0 0 0">
-                        <Label Text="{Loc 'ui-options-midi-volume'}" HorizontalExpand="True" />
+                        <Label Text="{Loc 'ui-save-map-name'}" HorizontalExpand="True" />
                         <Control MinSize="8 0" />
-                        <Slider Name="MidiVolumeSlider"
-                            MinValue="0"
-                            MaxValue="200"
-                            HorizontalExpand="True"
-                            MinSize="80 0"
-                            Rounded="True" />
-                        <Control MinSize="8 0" />
-                        <Label Name="MidiVolumeLabel" MinSize="48 0" Align="Right" />
-                        <Control MinSize="4 0"/>
+                        <LineEdit Name="MapName"
+                        Access="Public"
+                        Text=""
+                        PlaceHolder="E.g. Box Station"
+                        HorizontalExpand="True" />
+
                     </BoxContainer>
                     <BoxContainer Orientation="Horizontal" Margin="5 0 0 0">
-                        <Label Text="{Loc 'ui-options-ambience-volume'}" HorizontalExpand="True" />
+                        <Label Text="{Loc 'ui-save-map-path'}" HorizontalExpand="True" />
                         <Control MinSize="8 0" />
-                      
-                        <Control MinSize="8 0" />
-                        <Label Name="AmbienceVolumeLabel" MinSize="48 0" Align="Right" />
-                        <Control MinSize="4 0"/>
+                        <LineEdit Name="Id"
+                        Access="Public"
+                        Text=""
+                        PlaceHolder="E.g. Box"
+                        HorizontalExpand="True" />
+
                     </BoxContainer>
                     <BoxContainer Orientation="Horizontal" Margin="5 0 0 0">
                         <Label Text="{Loc 'ui-options-lobby-volume'}" HorizontalExpand="True" />
                         <Control MinSize="8 0" />
-                      
-                        <Control MinSize="8 0" />
-                        <Label Name="LobbyVolumeLabel" MinSize="48 0" Align="Right" />
-                        <Control MinSize="4 0"/>
+                        <LineEdit Name="Id"
+                        Access="Public"
+                        Text=""
+                        PlaceHolder="E.g. Box"
+                        HorizontalExpand="True" />
+
                     </BoxContainer>
                     <BoxContainer Orientation="Horizontal" Margin="5 0 0 0">
                         <Label Text="{Loc 'ui-options-tts-volume'}" HorizontalExpand="True" />
                         <Control MinSize="8 0" />
-                      
-                        <Control MinSize="8 0" />
-                        <Label Name="TtsVolumeLabel" MinSize="48 0" Align="Right" />
-                        <Control MinSize="4 0"/>
+                        <LineEdit Name="Id"
+                        Access="Public"
+                        Text=""
+                        PlaceHolder="E.g. Box"
+                        HorizontalExpand="True" />
+
                     </BoxContainer>
                     <BoxContainer Orientation="Horizontal" Margin="5 0 0 0">
                         <Label Text="{Loc 'ui-options-ambience-max-sounds'}" HorizontalExpand="True" />
                         <Control MinSize="8 0" />
-                      
-                        <Control MinSize="8 0" />
-                        <Label Name="AmbienceSoundsLabel" MinSize="48 0" Align="Right" />
-                        <Control MinSize="4 0"/>
+                        <LineEdit Name="Id"
+                        Access="Public"
+                        Text=""
+                        PlaceHolder="E.g. Box"
+                        HorizontalExpand="True" />
                     </BoxContainer>
                     <Control MinSize="0 8" />
              

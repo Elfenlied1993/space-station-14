@@ -119,6 +119,7 @@ namespace Content.Client.Viewport
             _inputManager.ViewportKeyEvent(this, args);
         }
 
+
         protected override void KeyBindUp(GUIBoundKeyEventArgs args)
         {
             base.KeyBindUp(args);
